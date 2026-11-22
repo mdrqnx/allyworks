@@ -547,7 +547,8 @@ table { border-collapse: collapse; }
   background: rgba(255, 255, 255, 0.86); color: var(--c-ink); border-bottom-color: var(--c-line);
   -webkit-backdrop-filter: saturate(180%) blur(16px); backdrop-filter: saturate(180%) blur(16px);
 }
-.site-header.is-open { background: #fff; }
+/* backdrop-filter would make the header the containing block of the fixed .mobile-nav */
+.site-header.is-open { background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none; }
 .site-header__inner { height: 100%; display: flex; align-items: center; gap: 40px; }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 1.3125rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }

@@ -311,7 +311,7 @@
             <div class="pf-roadmap__chart">
               <div class="pf-roadmap__axis" aria-hidden="true">
                 <span></span>
-                <span class="pf-roadmap__ticks"><em style="--x:0%">2026</em><em style="--x:25%">2028</em><em style="--x:50%">2030</em><em style="--x:75%">2032</em><em style="--x:100%">2034</em></span>
+                <span class="pf-roadmap__ticks"><em style="--x:0%">2026</em><em style="--x:25%" class="pf-tick-minor">2028</em><em style="--x:50%">2030</em><em style="--x:75%" class="pf-tick-minor">2032</em><em style="--x:100%">2034</em></span>
                 <span></span>
               </div>
               <ul class="pf-roadmap__rows">
@@ -446,7 +446,7 @@
           <article class="card card--glass" data-reveal>
             <div class="card__icon pf-glass-icon"><i data-lucide="gauge"></i></div>
             <h3 class="card__title">애플리케이션 성능 및<br>지연 시간 향상</h3>
-            <p class="card__text">#1 Java 런타임. 더 빠른 워밍업, 더 빠른 코드, 더 빠른 JVM 성능으로 사용자 경험을 개선합니다.</p>
+            <p class="card__text">고성능 Java 런타임으로 더 빠른 워밍업, 더 빠른 코드, 더 빠른 JVM 성능을 제공해 사용자 경험을 개선합니다.</p>
           </article>
           <article class="card card--glass" data-reveal style="--d:.08s">
             <div class="card__icon pf-glass-icon"><i data-lucide="cloud"></i></div>
@@ -532,9 +532,9 @@
             </div>
             <span class="pf-flow__arrow" aria-hidden="true"></span>
             <ul class="pf-flow__out">
-              <li><i data-lucide="list-checks"></i><span>JVM · Oracle Java<br>사용 현황</span></li>
-              <li><i data-lucide="code-2"></i><span>실행 코드 ·<br>미사용 코드</span></li>
-              <li><i data-lucide="bug"></i><span>실제 노출된<br>취약점(CVE)</span></li>
+              <li><i data-lucide="list-checks"></i><span>JVM · Oracle Java 사용 현황</span></li>
+              <li><i data-lucide="code-2"></i><span>실행 코드와<br class="br-desktop"> 미사용 코드</span></li>
+              <li><i data-lucide="bug"></i><span>실제 노출된 취약점(CVE)</span></li>
             </ul>
             <figcaption class="pf-flow__cap">프로덕션 Java 런타임 데이터에서 실행 가능한 인텔리전스로</figcaption>
           </figure>

@@ -339,7 +339,9 @@
   .pf-flow__jvms { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pf-flow__out { grid-template-columns: 1fr; }
   .pf-flow__out li { grid-template-columns: auto 1fr; align-items: center; }
-  .pf-flow__out br { display: none; }
+  .pf-roadmap__ticks .pf-tick-minor { display: none; }
+  .pf-chart__ax { font-size: 15px; }
+  .pf-chart__grid path, .pf-chart__axis { stroke-width: 1.4; }
 
   .pf-ic-bubbles { --gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pf-ic-bubbles .card { padding: 18px; }
