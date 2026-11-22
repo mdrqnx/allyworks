@@ -372,11 +372,11 @@ table { border-collapse: collapse; }
   border-radius: var(--radius-lg); overflow: hidden;
 }
 .logo-cloud__item {
-  background: #fff; display: grid; place-items: center;
+  background: #fff; display: grid; place-items: center; min-width: 0;
   min-height: 116px; padding: 24px;
 }
 .logo-cloud__item img {
-  max-height: 44px; max-width: 140px; width: auto; object-fit: contain;
+  max-height: 44px; max-width: min(140px, 100%); width: auto; height: auto; object-fit: contain;
   filter: grayscale(1); opacity: 0.72; transition: filter 0.3s var(--ease), opacity 0.3s var(--ease);
 }
 .logo-cloud__item:hover img { filter: none; opacity: 1; }

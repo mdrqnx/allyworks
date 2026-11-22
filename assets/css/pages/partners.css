@@ -1,0 +1,133 @@
+/* partners.html — 파트너 */
+
+/* Light section after a soft one (shared rule zeroes its top padding) */
+.section--soft + .section.pt-clients-sec { padding-top: var(--section-y); }
+
+/* ---------- Azul spotlight ---------- */
+.pt-azul {
+  display: grid; grid-template-columns: 7fr 5fr; gap: clamp(40px, 5vw, 72px); align-items: center;
+  border-radius: var(--radius-xl); padding: clamp(28px, 5vw, 72px);
+}
+.pt-azul__glow1 { width: 480px; height: 480px; right: -160px; top: -200px; opacity: 0.45; }
+.pt-azul__glow2 { width: 380px; height: 380px; left: 20%; bottom: -260px; opacity: 0.3; }
+.pt-azul__title { margin-top: 22px; color: #fff; }
+.pt-azul .lead { margin-top: 16px; }
+.pt-azul__text { margin-top: 14px; color: var(--c-dark-text-2); }
+.pt-azul__text strong { color: #fff; font-weight: 600; }
+.pt-azul .btn-row { margin-top: 32px; }
+.pt-azul__site { margin-top: 20px; color: #8ea6ff; }
+
+.pt-badges { margin-top: 28px; display: grid; gap: 10px; }
+.pt-badge {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 16px; border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04); border: 1px solid var(--c-dark-line-2);
+  color: #fff; font-weight: 600; font-size: 0.9375rem; letter-spacing: -0.01em;
+}
+.pt-badge .lucide { width: 20px; height: 20px; color: #93a9ff; }
+.pt-badge span { display: flex; flex-direction: column; line-height: 1.35; }
+.pt-badge small {
+  font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--c-dark-text-2);
+}
+
+/* partnership visual */
+.pt-azul__visual { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.pt-link { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 340px; }
+.pt-link__tile {
+  width: 100%; display: grid; place-items: center; border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.7);
+}
+.pt-link__tile--azul { background: #fff; padding: 40px 24px; }
+.pt-link__tile--azul img { width: 184px; height: auto; }
+.pt-link__tile--aw {
+  display: flex; justify-content: center; align-items: center; gap: 12px; padding: 30px 24px;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid var(--c-dark-line-2);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  font-size: 1.5rem; font-weight: 800; letter-spacing: -0.04em; color: #fff;
+}
+.pt-link__mark { width: 40px; height: 40px; }
+.pt-link__line {
+  position: relative; width: 2px; height: 92px;
+  background: linear-gradient(180deg, rgba(127, 155, 255, 0.9), rgba(180, 156, 255, 0.9));
+}
+.pt-link__line::before, .pt-link__line::after {
+  content: ""; position: absolute; left: 50%; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%;
+  background: #8ea6ff; box-shadow: 0 0 0 4px rgba(142, 166, 255, 0.2);
+}
+.pt-link__line::before { top: -4px; }
+.pt-link__line::after { bottom: -4px; background: #b49cff; box-shadow: 0 0 0 4px rgba(180, 156, 255, 0.2); }
+.pt-link__label {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); white-space: nowrap;
+  padding: 5px 12px; border-radius: 999px; background: var(--c-dark-3); border: 1px solid var(--c-dark-line-2);
+  font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-dark-text);
+}
+.pt-azul__caps { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.pt-azul__caps li {
+  padding: 5px 12px; border-radius: 999px; border: 1px solid var(--c-dark-line);
+  font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-dark-text-2);
+}
+
+@media (max-width: 960px) {
+  .pt-azul { grid-template-columns: 1fr; }
+  .pt-azul__visual { order: -1; }
+}
+@media (max-width: 560px) {
+  .pt-badge { font-size: 0.875rem; padding: 12px 14px; }
+  .pt-azul .btn-row .btn { width: 100%; }
+  .pt-link__tile--azul { padding: 30px 20px; }
+  .pt-link__line { height: 72px; }
+}
+
+/* ---------- Logo clouds ---------- */
+.pt-head-note { max-width: 460px; }
+.pt-cloud .logo-cloud__item { position: relative; min-width: 0; }
+.pt-cloud .logo-cloud__item img { max-width: min(140px, 100%); }
+.logo-cloud.pt-cloud--partners { --cols: 4; }
+.pt-cloud--partners .logo-cloud__item { min-height: 148px; }
+.pt-cloud--partners .logo-cloud__item img { max-height: 56px; }
+.logo-cloud.pt-cloud--clients { --cols: 3; }
+.pt-cloud--clients .logo-cloud__item { min-height: 136px; padding: 36px 20px 24px; }
+@media (max-width: 720px) {
+  .logo-cloud.pt-cloud--partners { --cols: 2; }
+  .pt-cloud--partners .logo-cloud__item { min-height: 112px; }
+  .pt-cloud--partners .logo-cloud__item img { max-height: 46px; }
+}
+@media (max-width: 560px) {
+  .pt-cloud--clients .logo-cloud__item { min-height: 92px; padding: 26px 10px 14px; }
+  .pt-cloud--clients .logo-cloud__item img { max-height: 32px; }
+}
+
+/* industry tags */
+.pt-tag {
+  position: absolute; left: 12px; top: 12px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.6875rem; font-weight: 600; letter-spacing: -0.005em; color: var(--c-text-3);
+}
+.pt-tag::before, .pt-dot { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--ind, var(--c-brand)); flex-shrink: 0; }
+[data-ind="mfg"] { --ind: var(--c-brand); }
+[data-ind="fin"] { --ind: var(--c-violet); }
+[data-ind="pub"] { --ind: #0ea5e9; }
+@media (max-width: 560px) {
+  .pt-tag { left: 8px; top: 8px; font-size: 0.625rem; gap: 4px; }
+}
+
+.pt-clients { align-items: center; }
+.pt-clients__head .h2 { margin-top: 16px; }
+.pt-clients__head .lead { margin-top: 18px; }
+.pt-legend { margin-top: 32px; border-top: 1px solid var(--c-line); }
+.pt-legend li {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
+  padding: 14px 0; border-bottom: 1px solid var(--c-line);
+  font-weight: 700; color: var(--c-ink); font-size: 0.9375rem;
+}
+.pt-dot { display: inline-block; width: 8px; height: 8px; box-shadow: 0 0 0 4px color-mix(in srgb, var(--ind) 16%, transparent); margin-right: 4px; }
+.pt-legend em { font-style: normal; font-weight: 400; color: var(--c-text-2); font-size: 0.875rem; }
+@media (max-width: 860px) { .pt-clients { gap: 40px; } }
+
+/* ---------- Benefits ---------- */
+@media (max-width: 1024px) and (min-width: 861px) { .pt-benefits { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .pt-benefits { grid-template-columns: 1fr; } }
+
+/* CTA eyebrow */
+.cta-band .eyebrow { color: #8ea6ff; }

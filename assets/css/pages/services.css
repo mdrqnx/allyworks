@@ -1,0 +1,96 @@
+/* services.html — 시스템 통합 */
+
+/* A light section directly after a dark one needs its top padding back */
+.section--dark + .section:not(.section--soft):not(.section--dark) { padding-top: var(--section-y); }
+
+/* Overview tiles */
+.svc-tile { overflow: hidden; padding: clamp(28px, 3.4vw, 44px); }
+.svc-tile::after {
+  content: ""; position: absolute; right: -120px; top: -120px; width: 320px; height: 320px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(58, 102, 255, 0.1), transparent);
+  pointer-events: none; transition: opacity 0.3s var(--ease); opacity: 0.6;
+}
+.svc-tile:hover::after { opacity: 1; }
+.svc-tile__num {
+  position: absolute; right: clamp(24px, 3vw, 40px); top: clamp(20px, 2.6vw, 32px);
+  font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 500; line-height: 1; letter-spacing: -0.04em;
+  color: transparent; -webkit-text-stroke: 1px var(--c-line-2);
+}
+.svc-tile__title { font-size: clamp(1.375rem, 2.2vw, 1.75rem); }
+.svc-tile .card__text { max-width: 460px; }
+.svc-tile .chip-row { margin-top: 24px; }
+
+/* Build */
+.svc-intro .h2 { margin-top: 16px; }
+.svc-intro .lead { margin-top: 20px; }
+.svc-intro .check-list { margin-top: 32px; }
+.svc-intro .check-list li { color: var(--c-text); font-weight: 500; }
+.svc-cards .card__icon { margin-bottom: 20px; }
+.svc-cards .card__title { font-size: 1.125rem; }
+.svc-cards .card__text { font-size: 0.9375rem; }
+@media (min-width: 861px) { .svc-intro { position: sticky; top: calc(var(--header-h) + 40px); } }
+
+/* Maintenance (dark) */
+.svc-maint { overflow: hidden; isolation: isolate; }
+.svc-maint__glow { width: 560px; height: 560px; left: -220px; top: -260px; opacity: 0.28; }
+.svc-maint__lead { max-width: 440px; }
+.svc-areas .card__icon { margin-bottom: 20px; }
+.svc-areas .card__title { font-size: 1.125rem; }
+.svc-areas .card__label + .card__title { margin-top: 6px; }
+.svc-areas .card__text { font-size: 0.9375rem; }
+.svc-note {
+  position: relative; display: flex; flex-direction: column; overflow: hidden;
+  border-radius: var(--radius-lg); padding: clamp(24px, 2.8vw, 36px);
+  background: var(--grad); color: #fff;
+  box-shadow: 0 24px 48px -24px rgba(58, 102, 255, 0.6);
+}
+.svc-note::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.22), transparent 55%);
+}
+.svc-note .card__icon { background: rgba(255, 255, 255, 0.16); color: #fff; margin-bottom: 20px; }
+.svc-note .card__title { color: #fff; font-size: 1.125rem; }
+.svc-note .card__text { color: rgba(255, 255, 255, 0.84); font-size: 0.9375rem; }
+
+/* Process */
+.svc-step-ico { width: 20px; height: 20px; margin-right: 10px; vertical-align: -3px; color: var(--c-brand); }
+.step__title { display: flex; align-items: center; }
+
+/* Why */
+.svc-why .card { padding: clamp(24px, 3vw, 40px); }
+.svc-why .feature__title { font-size: 1.1875rem; }
+.svc-why .feature__text { font-size: 1rem; line-height: 1.7; }
+.svc-why .link-arrow { display: inline-flex; }
+
+/* Clients */
+.svc-clients__head { margin-bottom: 0; }
+.svc-clients__head .link-arrow { margin-top: 28px; }
+.logo-cloud.logo-cloud--3x3 { --cols: 3; }
+@media (max-width: 860px) { .svc-clients { gap: 40px; } }
+@media (max-width: 560px) {
+  .logo-cloud--3x3 .logo-cloud__item { min-height: 84px; padding: 14px 10px; }
+  .logo-cloud--3x3 .logo-cloud__item img { max-height: 32px; }
+}
+
+/* Light section after a soft one (shared rule zeroes it) */
+.section--soft + .section.svc-clients-sec { padding-top: var(--section-y); }
+/* Logos must shrink inside narrow tiles */
+.logo-cloud--3x3 .logo-cloud__item { min-width: 0; }
+.logo-cloud--3x3 .logo-cloud__item img { max-width: min(140px, 100%); }
+
+/* Compact horizontal cards on phones */
+@media (max-width: 640px) {
+  .svc-cards .card, .svc-areas .card {
+    display: grid; grid-template-columns: 44px 1fr; column-gap: 16px; align-content: start; padding: 22px;
+  }
+  .svc-cards .card > *, .svc-areas .card > * { grid-column: 2; }
+  .svc-cards .card__icon, .svc-areas .card__icon {
+    grid-column: 1; grid-row: 1 / span 3; width: 44px; height: 44px; border-radius: 12px; margin: 0;
+  }
+  .svc-cards .card__icon .lucide, .svc-areas .card__icon .lucide { width: 22px; height: 22px; }
+  .svc-cards .card__text, .svc-areas .card__text { margin-top: 6px; }
+  .svc-areas { --gap: 16px; }
+  .svc-cards { --gap: 16px; }
+  .svc-why .feature { flex-direction: column; gap: 16px; }
+  .svc-tile__num { font-size: 2.75rem; }
+}
