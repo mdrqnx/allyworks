@@ -21,7 +21,7 @@ assets/
   css/style.css          공통 디자인 시스템 (색상·타이포 토큰, 헤더/푸터, 버튼, 카드 등 컴포넌트)
   css/pages/*.css        페이지별 스타일
   js/main.js             헤더 스크롤, 모바일 메뉴, 스크롤 등장 애니메이션, 숫자 카운트업, 문의 폼(mailto)
-  img/brand/             파비콘·기존 로고
+  img/brand/             공식 로고(SVG, 기존 홈페이지 로고를 벡터화)·파비콘·원본 PNG
   img/partners/          해외/국내 사업 파트너 로고
   img/clients/           주요 고객사 로고
 ```
