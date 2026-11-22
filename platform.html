@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Java 플랫폼 · Azul Systems | Allyworks 앨리웍스</title>
+  <meta name="description" content="Azul Systems 한국 공식 총판 앨리웍스. TCK 인증 OpenJDK Azul Platform Core, 고성능 JVM Azul Platform Prime, Azul Intelligence Cloud와 Oracle Java 전환 서비스를 제공합니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Allyworks">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="Java 플랫폼 · Azul Systems | Allyworks 앨리웍스">
+  <meta property="og:description" content="Azul Systems 한국 공식 총판 앨리웍스. TCK 인증 OpenJDK Azul Platform Core, 고성능 JVM Azul Platform Prime, Azul Intelligence Cloud와 Oracle Java 전환 서비스를 제공합니다.">
+  <meta name="theme-color" content="#060a17">
+  <link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages/platform.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <!-- ============ HEADER (identical on every page; only aria-current moves) ============ -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Allyworks 홈으로">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="aw-mark" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#3a66ff"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#aw-mark)"/><path d="M9.5 23.5 16 8.5l6.5 15" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="18.6" r="2" fill="#7ff0ff"/></svg>
+        </span>
+        <span class="brand__name">Allyworks</span>
+      </a>
+      <nav class="gnb" aria-label="주메뉴">
+        <ul>
+          <li><a href="company.html">회사소개</a></li>
+          <li><a href="platform.html" aria-current="page">Java 플랫폼</a></li>
+          <li><a href="services.html">시스템 통합</a></li>
+          <li><a href="partners.html">파트너</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a href="contact.html" class="btn btn--sm btn--primary">문의하기 <i data-lucide="arrow-right"></i></a>
+        <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden>
+      <ul>
+        <li><a href="company.html">회사소개 <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="platform.html" aria-current="page">Java 플랫폼 <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="services.html">시스템 통합 <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="partners.html">파트너 <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="contact.html">문의하기 <i data-lucide="arrow-up-right"></i></a></li>
+      </ul>
+      <a href="mailto:joon@allyworks.co.kr" class="btn btn--primary btn--lg">도입 상담 메일 보내기</a>
+      <p class="mobile-nav__meta">joon@allyworks.co.kr<br>070-4099-2232</p>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="page-hero on-dark bg-grid pf-hero">
+      <span class="glow glow--blue" aria-hidden="true"></span>
+      <span class="glow glow--violet" aria-hidden="true"></span>
+      <div class="container pf-hero__grid">
+        <div class="page-hero__inner">
+          <ol class="breadcrumb" aria-label="현재 위치">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Java 플랫폼</li>
+          </ol>
+          <span class="eyebrow">Java Platform · Azul Systems</span>
+          <h1 class="h1">엔터프라이즈 Java를<br>더 빠르고, 안전하고,<br><span class="text-grad">경제적으로</span></h1>
+          <p class="lead">확실한 성능, 보안, 가치를 통해 가장 진보적인 Java 애플리케이션과 배포를 지원하는 최신 클라우드 엔터프라이즈를 위한 Java Platform. 앨리웍스는 Azul Systems의 한국 공식 총판으로 Azul 전 제품을 국내에 공급합니다.</p>
+          <ul class="chip-row pf-hero__chips" aria-label="주요 특징">
+            <li class="chip chip--dark"><i data-lucide="badge-check"></i> Azul 한국 공식 총판</li>
+            <li class="chip chip--dark"><i data-lucide="shield-check"></i> TCK 인증 OpenJDK</li>
+            <li class="chip chip--dark"><i data-lucide="layers"></i> Java 6 – 25 지원</li>
+          </ul>
+          <div class="btn-row">
+            <a href="contact.html" class="btn btn--primary btn--lg">도입 상담 <i data-lucide="arrow-right"></i></a>
+            <a href="#products" class="btn btn--ghost-light btn--lg">제품 살펴보기</a>
+          </div>
+        </div>
+
+        <figure class="pf-stack" aria-label="Azul Java 플랫폼 구성도">
+          <div class="pf-stack__app">
+            <i data-lucide="app-window"></i>
+            <span>엔터프라이즈 Java 애플리케이션</span>
+          </div>
+          <div class="pf-stack__layer" data-accent="payara">
+            <span class="pf-stack__dot"></span>
+            <span class="pf-stack__name">Azul Payara</span>
+            <span class="pf-stack__role">Jakarta EE 런타임</span>
+          </div>
+          <div class="pf-stack__pair">
+            <div class="pf-stack__layer" data-accent="core">
+              <span class="pf-stack__dot"></span>
+              <span class="pf-stack__name">Platform Core</span>
+              <span class="pf-stack__role">TCK 인증 OpenJDK</span>
+            </div>
+            <div class="pf-stack__layer" data-accent="prime">
+              <span class="pf-stack__dot"></span>
+              <span class="pf-stack__name">Platform Prime</span>
+              <span class="pf-stack__role">고성능 JVM</span>
+            </div>
+          </div>
+          <div class="pf-stack__layer pf-stack__layer--wide" data-accent="cloud">
+            <span class="pf-stack__dot"></span>
+            <span class="pf-stack__name">Azul Intelligence Cloud</span>
+            <span class="pf-stack__role">인벤토리 · 취약점 탐지</span>
+          </div>
+          <figcaption class="pf-stack__base">Linux · Windows · macOS &nbsp;/&nbsp; x64 · ARM · Container</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 2. WHY AZUL / WHY NOW ============ -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="split split--7-5 split--top">
+          <div>
+            <div class="section-head" data-reveal>
+              <span class="eyebrow">Why Azul, why now</span>
+              <h2 class="h2" id="why-title">Java 라이선스 비용,<br class="br-desktop"> 이제 다시 계산할 때입니다</h2>
+              <p class="lead">2023년 1월부터 Oracle Java SE Universal Subscription은 실제 Java 사용량이 아닌 <strong>전체 직원 수</strong>를 기준으로 가격이 책정됩니다. Azul은 코드 수정 없이 그대로 교체할 수 있는 TCK 인증 OpenJDK로 비용은 낮추고, 보안과 지원 수준은 그대로 지킵니다.</p>
+            </div>
+            <div class="pf-why-list">
+              <div class="feature" data-reveal>
+                <div class="feature__icon"><i data-lucide="users"></i></div>
+                <div>
+                  <h3 class="feature__title">직원 수 기준 과금 구조</h3>
+                  <p class="feature__text">Java를 사용하지 않는 직원까지 모두 과금 대상에 포함되어, 조직 규모가 클수록 비용 부담이 커집니다.</p>
+                </div>
+              </div>
+              <div class="feature" data-reveal style="--d:.08s">
+                <div class="feature__icon"><i data-lucide="refresh-cw"></i></div>
+                <div>
+                  <h3 class="feature__title">코드 수정 없는 Drop-in 대체</h3>
+                  <p class="feature__text">Java SE TCK 검증을 통과한 100% 오픈소스 빌드. 대부분의 서버 애플리케이션은 설치, JAVA_HOME 변경, 재시작만으로 전환됩니다.</p>
+                </div>
+              </div>
+              <div class="feature" data-reveal style="--d:.16s">
+                <div class="feature__icon"><i data-lucide="shield-check"></i></div>
+                <div>
+                  <h3 class="feature__title">Oracle과 같은 보안 업데이트 주기</h3>
+                  <p class="feature__text">분기별 CPU·PSU 업데이트와 수시 긴급 패치를 제공합니다. Azul은 Oracle을 제외하고 CPU와 월간 CSPU를 모두 제공하는 유일한 Java 벤더입니다(Azul 발표).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card pf-cred" data-reveal style="--d:.1s" aria-labelledby="cred-title">
+            <div class="pf-cred__logo">
+              <img src="assets/img/partners/azul.png" width="153" height="64" alt="Azul Systems 로고">
+            </div>
+            <span class="card__label">Authorized Distributor · APAC</span>
+            <h3 class="card__title" id="cred-title">Azul Systems 한국 공식 총판</h3>
+            <p class="card__text">앨리웍스는 Azul의 공식 총판으로 Azul 전 제품을 국내 시장에 공급하고, 도입 상담부터 전환, 기술지원과 유지보수까지 직접 책임집니다.</p>
+            <div class="card__body">
+              <p class="pf-cred__sub">Azul 파트너 디렉터리 등재 역량</p>
+              <ul class="check-list pf-cred__list">
+                <li>Java Development</li>
+                <li>Java Upgrades</li>
+                <li>Java Compliance / Defense</li>
+                <li>Authorized Migration Advisory Partner</li>
+                <li>Authorized Migration Services Partner</li>
+              </ul>
+            </div>
+            <div class="card__foot">
+              <a class="link-arrow" href="https://www.azul.com/partner-directory/allyworks-co-ltd/" target="_blank" rel="noopener">Azul 파트너 디렉터리에서 확인 <i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="stats pf-stats mt-64" data-reveal>
+          <div class="stat">
+            <div class="stat__value"><small class="pf-pre">최대</small><span data-count="70">70</span><small>%</small></div>
+            <p class="stat__label">Oracle Java 대비 비용 절감<br><span class="pf-stat-tag">Platform Core</span></p>
+          </div>
+          <div class="stat">
+            <div class="stat__value"><span data-count="20">20</span><small>%+</small></div>
+            <p class="stat__label">클라우드 비용 절감<br><span class="pf-stat-tag">Platform Prime</span></p>
+          </div>
+          <div class="stat">
+            <div class="stat__value">2–5<small>x</small></div>
+            <p class="stat__label">더 빠른 워밍업 (OpenJDK 대비)<br><span class="pf-stat-tag">Platform Prime</span></p>
+          </div>
+          <div class="stat">
+            <div class="stat__value"><span data-count="8">8</span><small>년+</small></div>
+            <p class="stat__label">LTS 버전 프로덕션 지원<br><span class="pf-stat-tag">+ 2년 연장 지원</span></p>
+          </div>
+        </div>
+        <p class="footnote mt-16">* 수치와 Oracle 라이선스 관련 내용은 Azul Systems 공개 자료 기준이며, 고객 환경에 따라 달라질 수 있습니다. 비용 절감률은 서버 배포 시 Oracle Java SE 구독 가격 대비 기준입니다.</p>
+      </div>
+    </section>
+
+    <!-- ============ 3. PRODUCT OVERVIEW ============ -->
+    <section class="section section--soft" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-head section-head--split" data-reveal>
+          <div class="section-head__main">
+            <span class="eyebrow">Products</span>
+            <h2 class="h2" id="products-title">안전하고 효율적이며<br class="br-desktop"> 경제적인 Java 만들기</h2>
+          </div>
+          <p class="lead pf-head-aside">세계 최대의 독립적인 Java 엔지니어링팀이 만든 Azul 포트폴리오. 런타임부터 가시성, 애플리케이션 서버까지 필요한 만큼 선택하세요.</p>
+        </div>
+
+        <div class="grid grid--4 pf-products">
+          <article class="card card--hover product-card" data-accent="core" data-reveal>
+            <div class="card__icon"><i data-lucide="coffee"></i></div>
+            <span class="card__label">Java 런타임</span>
+            <h3 class="card__title">Azul Platform Core</h3>
+            <p class="card__text">세계에서 가장 많이 지원되는 OpenJDK 빌드. Oracle Java SE를 일대일로 대체합니다.</p>
+            <ul class="check-list card__body pf-mini-list">
+              <li>TCK 인증 · 분기별 보안 업데이트</li>
+              <li>Java 6부터 25까지 지원</li>
+              <li>Oracle Java 대비 최대 70% 절감</li>
+            </ul>
+            <div class="card__foot"><a class="link-arrow" href="#core">자세히 보기 <i data-lucide="arrow-right"></i></a></div>
+          </article>
+          <article class="card card--hover product-card" data-accent="prime" data-reveal style="--d:.08s">
+            <div class="card__icon"><i data-lucide="zap"></i></div>
+            <span class="card__label">고성능 JVM</span>
+            <h3 class="card__title">Azul Platform Prime</h3>
+            <p class="card__text">놀라운 가치를 제공하는 초고속 성능. 더 빠른 워밍업, 더 빠른 코드, 적절한 크기의 리소스.</p>
+            <ul class="check-list card__body pf-mini-list">
+              <li>C4 · Falcon JIT · ReadyNow</li>
+              <li>2–5x 더 빠른 워밍업</li>
+              <li>클라우드 비용 20% 이상 절감</li>
+            </ul>
+            <div class="card__foot"><a class="link-arrow" href="#prime">자세히 보기 <i data-lucide="arrow-right"></i></a></div>
+          </article>
+          <article class="card card--hover product-card" data-accent="cloud" data-reveal style="--d:.16s">
+            <div class="card__icon"><i data-lucide="radar"></i></div>
+            <span class="card__label">가시성 · 보안</span>
+            <h3 class="card__title">Azul Intelligence Cloud</h3>
+            <p class="card__text">프로덕션 Java 런타임 데이터를 실행 가능한 인텔리전스로 바꿔 DevOps 생산성을 높입니다.</p>
+            <ul class="check-list card__body pf-mini-list">
+              <li>Runtime Inventory</li>
+              <li>Code Inventory</li>
+              <li>Vulnerability Detection</li>
+            </ul>
+            <div class="card__foot"><a class="link-arrow" href="#intelligence-cloud">자세히 보기 <i data-lucide="arrow-right"></i></a></div>
+          </article>
+          <article class="card card--hover product-card" data-accent="payara" data-reveal style="--d:.24s">
+            <div class="card__icon"><i data-lucide="server"></i></div>
+            <span class="card__label">Jakarta EE 런타임</span>
+            <h3 class="card__title">Azul Payara</h3>
+            <p class="card__text">WebLogic, WebSphere, JBoss에서 대규모 재작성 없이 옮겨 갈 수 있는 애플리케이션 서버.</p>
+            <ul class="check-list card__body pf-mini-list">
+              <li>Payara Server</li>
+              <li>Payara Micro</li>
+              <li>앱 서버 라이선스 최대 60% 절감</li>
+            </ul>
+            <div class="card__foot"><a class="link-arrow" href="#payara">자세히 보기 <i data-lucide="arrow-right"></i></a></div>
+          </article>
+        </div>
+        <p class="footnote mt-24">* 수치는 Azul Systems 공개 자료 기준이며, 고객 환경에 따라 달라질 수 있습니다.</p>
+      </div>
+    </section>
+
+    <!-- ============ 4. AZUL PLATFORM CORE ============ -->
+    <section class="section pf-gap" id="core" aria-labelledby="core-title">
+      <div class="container">
+        <div class="split">
+          <div data-reveal>
+            <span class="eyebrow">Azul Platform Core</span>
+            <h2 class="h2 mt-16" id="core-title">세계에서 가장 많이 지원되는<br class="br-desktop"> OpenJDK 빌드</h2>
+            <p class="lead mt-24">Azul Platform Core는 엔터프라이즈용으로 설계되었습니다. 오늘날의 비즈니스 크리티컬 Java 서비스를 실행하는 데 필요한 인증된 빌드, 엄격한 보안, 비용 효율성을 모두 갖췄습니다.</p>
+            <ul class="check-list mt-32 pf-core-list">
+              <li><strong>Java SE TCK 표준 준수 검증</strong> — 100% 오픈소스 Azul Zulu 빌드</li>
+              <li><strong>분기별 CPU · PSU 업데이트</strong>와 수시(out-of-cycle) 보안 패치</li>
+              <li><strong>Java 6 · 7 레거시 프로덕션 지원</strong> — Applet · Java Web Start는 IcedTea-Web으로</li>
+              <li><strong>IP 보호 및 면책</strong>(IP Indemnification) 제공</li>
+              <li><strong>OEM 및 ISV</strong>를 위한 Java 런타임</li>
+            </ul>
+            <div class="btn-row mt-32">
+              <a href="https://www.azul.com/products/core/" class="btn btn--dark" target="_blank" rel="noopener">Azul Platform Core 자세히 <i data-lucide="arrow-up-right"></i></a>
+              <a href="contact.html" class="btn btn--ghost">도입 상담</a>
+            </div>
+          </div>
+
+          <figure class="pf-venn-wrap" data-reveal style="--d:.1s">
+            <div class="pf-venn" role="img" aria-label="Azul Platform Core의 세 가지 가치: Oracle Java 대체, 보안 준비 및 규정 준수, IP 보호 및 면책">
+              <span class="pf-venn__c pf-venn__c--a"><b>Oracle Java<br>대체</b></span>
+              <span class="pf-venn__c pf-venn__c--b"><b>보안 준비 및<br>규정 준수</b></span>
+              <span class="pf-venn__c pf-venn__c--c"><b>IP 보호 및<br>면책</b></span>
+              <span class="pf-venn__core">Azul Zulu</span>
+            </div>
+            <figcaption class="pf-venn__cap">
+              <span><i data-lucide="coffee"></i> 세계에서 가장 안전하고 안정적인 OpenJDK 빌드, Azul Zulu 포함</span>
+              <span><i data-lucide="trending-down"></i> Oracle Java 대비 최대 70% 비용 절감*</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="split split--7-5 split--top mt-64 pf-core-row">
+          <div class="card pf-roadmap" data-reveal>
+            <div class="pf-roadmap__head">
+              <div>
+                <span class="card__label">Supported versions</span>
+                <h3 class="card__title mt-8">지원 버전 & 프로덕션 지원 로드맵</h3>
+              </div>
+              <span class="chip chip--brand"><i data-lucide="calendar-clock"></i> LTS 최소 8년 + 연장 2년</span>
+            </div>
+            <div class="pf-roadmap__chart">
+              <div class="pf-roadmap__axis" aria-hidden="true">
+                <span></span>
+                <span class="pf-roadmap__ticks"><em style="--x:0%">2026</em><em style="--x:25%">2028</em><em style="--x:50%">2030</em><em style="--x:75%">2032</em><em style="--x:100%">2034</em></span>
+                <span></span>
+              </div>
+              <ul class="pf-roadmap__rows">
+                <li style="--w:96.3%"><span class="pf-roadmap__v">Java 25 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2033.09</span></li>
+                <li style="--w:71.3%"><span class="pf-roadmap__v">Java 21 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2031.09</span></li>
+                <li style="--w:46.3%"><span class="pf-roadmap__v">Java 17 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2029.09</span></li>
+                <li style="--w:75.5%"><span class="pf-roadmap__v">Java 11 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2032.01</span></li>
+                <li style="--w:61.9%"><span class="pf-roadmap__v">Java 8 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2030.12</span></li>
+                <li class="pf-roadmap__legacy"><span class="pf-roadmap__v">Java 6 · 7</span><span class="pf-roadmap__note"><i data-lucide="history"></i> 레거시 프로덕션 지원</span><span class="pf-roadmap__date">Legacy</span></li>
+              </ul>
+            </div>
+            <p class="footnote mt-24">막대는 현재(2026년)부터 Azul 로드맵상 프로덕션 지원 종료 시점까지를 나타냅니다. STS 릴리스(Java 27, 2026년 9월 GA)도 지원합니다. 일정은 Azul 공개 로드맵 기준입니다.</p>
+          </div>
+
+          <div class="pf-core-side">
+            <div class="card pf-tiers" data-reveal style="--d:.08s">
+              <span class="card__label">Support tiers</span>
+              <h3 class="card__title mt-8">필요에 맞는 기술지원 등급</h3>
+              <div class="pf-tier">
+                <div class="feature__icon"><i data-lucide="clock"></i></div>
+                <div>
+                  <p class="pf-tier__name">Standard</p>
+                  <p class="pf-tier__text">업무 시간 지원 · 익영업일 응답</p>
+                </div>
+              </div>
+              <div class="pf-tier">
+                <div class="feature__icon pf-tier__icon--premium"><i data-lucide="headset"></i></div>
+                <div>
+                  <p class="pf-tier__name">Premium</p>
+                  <p class="pf-tier__text">24x7x365 지원 · 1시간 이내 최초 응답</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card--soft pf-platforms" data-reveal style="--d:.16s">
+              <span class="card__label">Platforms &amp; tools</span>
+              <ul class="chip-row mt-16" aria-label="지원 플랫폼">
+                <li class="chip">Linux</li><li class="chip">macOS</li><li class="chip">Windows</li>
+                <li class="chip">x64</li><li class="chip">ARM</li><li class="chip">Alpine</li>
+                <li class="chip"><i data-lucide="package"></i> 패키지 매니저</li><li class="chip"><i data-lucide="container"></i> 컨테이너 이미지</li>
+              </ul>
+              <p class="small muted mt-16">Mission Control · Migration Toolkit · GC Log Analyzer · Azul Inspector 등 운영 도구 제공</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. AZUL PLATFORM PRIME (dark) ============ -->
+    <section class="section section--dark pf-prime" id="prime" aria-labelledby="prime-title">
+      <span class="glow glow--violet pf-prime__glow" aria-hidden="true"></span>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Azul Platform Prime</span>
+          <h2 class="h2" id="prime-title">놀라운 가치를 제공하는<br class="br-desktop"> <span class="text-grad">초고속 Java 성능</span></h2>
+          <p class="lead">Azul Platform Prime(구 Zing)은 Azul Zing 빌드 기반의 고성능 JVM입니다. Java TCK를 준수하는 drop-in 런타임으로, 코드 수정이나 재컴파일 없이 코어당 처리량은 높이고 꼬리 지연은 더 낮고 예측 가능하게 만듭니다.</p>
+        </div>
+
+        <div class="split split--7-5">
+          <figure class="card card--glass pf-charts" data-reveal>
+            <div class="pf-charts__head">
+              <span class="card__label">Illustrative</span>
+              <ul class="pf-legend" aria-label="범례">
+                <li class="pf-legend__prime">Azul Platform Prime</li>
+                <li class="pf-legend__base">일반 OpenJDK</li>
+              </ul>
+            </div>
+            <div class="pf-charts__grid">
+              <div class="pf-chart">
+                <p class="pf-chart__title">워밍업 · 처리량</p>
+                <svg viewBox="0 0 400 140" role="img" aria-label="개념도: Azul Platform Prime은 일반 OpenJDK보다 더 빨리 최대 처리량에 도달합니다">
+                  <defs>
+                    <linearGradient id="pf-grad-line" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#7f9bff"/><stop offset=".6" stop-color="#b49cff"/><stop offset="1" stop-color="#6ee3ff"/></linearGradient>
+                    <linearGradient id="pf-grad-area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7b5cff" stop-opacity=".3"/><stop offset="1" stop-color="#7b5cff" stop-opacity="0"/></linearGradient>
+                  </defs>
+                  <g class="pf-chart__grid"><path d="M30 28H392M30 60H392M30 92H392"/></g>
+                  <path class="pf-chart__axis" d="M30 16V122H392"/>
+                  <path d="M30 120 C 50 58, 70 34, 112 31 L 392 28 V122 H30Z" fill="url(#pf-grad-area)"/>
+                  <path class="pf-chart__base" d="M30 121 C 100 118, 140 98, 190 74 S 300 40, 392 36"/>
+                  <path class="pf-chart__prime" d="M30 120 C 50 58, 70 34, 112 31 L 392 28" stroke="url(#pf-grad-line)"/>
+                  <text x="36" y="12" class="pf-chart__ax">처리량 ↑</text>
+                  <text x="392" y="137" text-anchor="end" class="pf-chart__ax">시간 →</text>
+                </svg>
+              </div>
+              <div class="pf-chart">
+                <p class="pf-chart__title">지연 시간 · GC 일시정지</p>
+                <svg viewBox="0 0 400 140" role="img" aria-label="개념도: 일반 OpenJDK는 GC 일시정지로 지연 시간이 튀지만, C4를 사용하는 Platform Prime은 낮고 고른 지연 시간을 유지합니다">
+                  <g class="pf-chart__grid"><path d="M30 28H392M30 60H392M30 92H392"/></g>
+                  <path class="pf-chart__axis" d="M30 16V122H392"/>
+                  <path class="pf-chart__base" d="M30 100 L70 98 L80 52 L90 99 L150 97 L160 30 L170 98 L230 100 L240 64 L250 98 L310 97 L320 24 L330 99 L392 98"/>
+                  <path class="pf-chart__prime" d="M30 112 C 100 110, 160 113, 220 111 S 330 110, 392 111" stroke="url(#pf-grad-line)"/>
+                  <text x="36" y="12" class="pf-chart__ax">지연 시간 ↑</text>
+                  <text x="392" y="137" text-anchor="end" class="pf-chart__ax">시간 →</text>
+                </svg>
+              </div>
+            </div>
+            <figcaption class="pf-charts__cap"><i data-lucide="info"></i> 이해를 돕기 위한 개념도이며, 실제 측정값이 아닙니다.</figcaption>
+          </figure>
+
+          <div class="pf-prime-features">
+            <div class="feature" data-reveal>
+              <div class="feature__icon"><i data-lucide="timer"></i></div>
+              <div>
+                <h3 class="feature__title">C4 Pauseless GC</h3>
+                <p class="feature__text">일시정지 없는 가비지 컬렉터로 GC로 인한 지연 급증을 줄이고 꼬리 지연을 예측 가능하게 유지합니다.</p>
+              </div>
+            </div>
+            <div class="feature" data-reveal style="--d:.08s">
+              <div class="feature__icon"><i data-lucide="cpu"></i></div>
+              <div>
+                <h3 class="feature__title">Falcon JIT 컴파일러</h3>
+                <p class="feature__text">LLVM 기반 JIT 컴파일러가 더 빠른 코드를 만들어 코어당 처리량을 높입니다.</p>
+              </div>
+            </div>
+            <div class="feature" data-reveal style="--d:.16s">
+              <div class="feature__icon"><i data-lucide="rocket"></i></div>
+              <div>
+                <h3 class="feature__title">ReadyNow</h3>
+                <p class="feature__text">워밍업 시간을 줄여 배포와 재시작 직후부터 빠른 성능을 제공합니다.</p>
+              </div>
+            </div>
+            <div class="feature" data-reveal style="--d:.24s">
+              <div class="feature__icon"><i data-lucide="cloud-cog"></i></div>
+              <div>
+                <h3 class="feature__title">Optimizer Hub</h3>
+                <p class="feature__text">Cloud Native Compiler 등 Optimizer Hub 서비스로 JVM 최적화 작업을 인프라 전반에서 효율화합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid--3 mt-64">
+          <article class="card card--glass" data-reveal>
+            <div class="card__icon pf-glass-icon"><i data-lucide="gauge"></i></div>
+            <h3 class="card__title">애플리케이션 성능 및<br>지연 시간 향상</h3>
+            <p class="card__text">#1 Java 런타임. 더 빠른 워밍업, 더 빠른 코드, 더 빠른 JVM 성능으로 사용자 경험을 개선합니다.</p>
+          </article>
+          <article class="card card--glass" data-reveal style="--d:.08s">
+            <div class="card__icon pf-glass-icon"><i data-lucide="cloud"></i></div>
+            <h3 class="card__title">인프라스트럭처 및<br>클라우드 비용 최적화</h3>
+            <p class="card__text">코어당 처리량이 높아져 적절한 크기의 리소스로 같은 워크로드를 처리합니다.</p>
+          </article>
+          <article class="card card--glass" data-reveal style="--d:.16s">
+            <div class="card__icon pf-glass-icon"><i data-lucide="workflow"></i></div>
+            <h3 class="card__title">DevOps 생산성 및<br>효율성</h3>
+            <p class="card__text">코드 수정 없이 런타임만 교체하므로 튜닝과 장애 대응에 드는 시간을 줄입니다.</p>
+          </article>
+        </div>
+
+        <div class="stats pf-stats-3 mt-64" data-reveal>
+          <div class="stat">
+            <div class="stat__value">2–5<small>x</small></div>
+            <p class="stat__label">일반 OpenJDK 대비 더 빠른 워밍업</p>
+          </div>
+          <div class="stat">
+            <div class="stat__value"><small class="pf-pre">최대</small><span data-count="50">50</span><small>%</small></div>
+            <p class="stat__label">더 적은 컴퓨팅 코어</p>
+          </div>
+          <div class="stat">
+            <div class="stat__value"><span data-count="20">20</span><small>%+</small></div>
+            <p class="stat__label">클라우드 비용 절감</p>
+          </div>
+        </div>
+        <div class="pf-prime-foot">
+          <p class="footnote">* 수치는 Azul Systems 공개 자료 기준이며, 고객 환경에 따라 달라질 수 있습니다.</p>
+          <a href="https://www.azul.com/products/prime/" class="btn btn--ghost-light" target="_blank" rel="noopener">Azul Platform Prime 자세히 <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. AZUL INTELLIGENCE CLOUD ============ -->
+    <section class="section pf-gap" id="intelligence-cloud" aria-labelledby="ic-title">
+      <div class="container">
+        <div class="split">
+          <div>
+            <div data-reveal>
+              <span class="eyebrow">Azul Intelligence Cloud</span>
+              <h2 class="h2 mt-16" id="ic-title">프로덕션 런타임 데이터로<br class="br-desktop"> DevOps 생산성을 높이다</h2>
+              <p class="lead mt-24">실제 운영 중인 Java 런타임 데이터를 실행 가능한 인텔리전스로 바꿉니다. 알려진 취약점을 지속적으로 탐지하고, 실제로 실행되는 코드를 카탈로그화해 가장 정확한 신호를 제공합니다.</p>
+            </div>
+            <div class="pf-ic-features mt-48">
+              <div class="feature" data-reveal>
+                <div class="feature__icon pf-icon-cloud"><i data-lucide="server-cog"></i></div>
+                <div>
+                  <h3 class="feature__title">Runtime Inventory</h3>
+                  <p class="feature__text">실행 중이거나 설치된 모든 JVM을 목록화하고 Oracle JVM 사용 현황을 추적해 라이선스 감사 대응과 전환 계획에 활용합니다.</p>
+                </div>
+              </div>
+              <div class="feature" data-reveal style="--d:.08s">
+                <div class="feature__icon pf-icon-cloud"><i data-lucide="file-code-2"></i></div>
+                <div>
+                  <h3 class="feature__title">Code Inventory</h3>
+                  <p class="feature__text">프로덕션에서 실제로 실행되는 라이브러리·클래스·메서드를 파악해 사용되지 않는 코드를 드러냅니다.</p>
+                </div>
+              </div>
+              <div class="feature" data-reveal style="--d:.16s">
+                <div class="feature__icon pf-icon-cloud"><i data-lucide="shield-alert"></i></div>
+                <div>
+                  <h3 class="feature__title">Vulnerability Detection</h3>
+                  <p class="feature__text">실행 중인 Java 애플리케이션의 알려진 CVE를 탐지하고, JDK 업데이트 및 CISA KEV와 대조해 오탐지를 걸러냅니다.</p>
+                </div>
+              </div>
+            </div>
+            <a class="link-arrow mt-32" href="https://www.azul.com/products/intelligence-cloud/" target="_blank" rel="noopener">Azul Intelligence Cloud 자세히 <i data-lucide="arrow-up-right"></i></a>
+          </div>
+
+          <figure class="pf-flow" data-reveal style="--d:.1s" aria-label="프로덕션 Java 런타임 데이터에서 실행 가능한 인텔리전스로">
+            <p class="pf-flow__label">Production Java runtimes</p>
+            <div class="pf-flow__jvms" aria-hidden="true">
+              <span><i data-lucide="coffee"></i> JVM</span><span><i data-lucide="coffee"></i> JVM</span><span><i data-lucide="coffee"></i> JVM</span><span><i data-lucide="coffee"></i> JVM</span>
+            </div>
+            <span class="pf-flow__arrow" aria-hidden="true"></span>
+            <div class="pf-flow__hub">
+              <span class="pf-flow__hub-icon"><i data-lucide="radar"></i></span>
+              <div>
+                <strong>Azul Intelligence Cloud</strong>
+                <span>런타임 데이터 수집 · 분석</span>
+              </div>
+            </div>
+            <span class="pf-flow__arrow" aria-hidden="true"></span>
+            <ul class="pf-flow__out">
+              <li><i data-lucide="list-checks"></i><span>JVM · Oracle Java<br>사용 현황</span></li>
+              <li><i data-lucide="code-2"></i><span>실행 코드 ·<br>미사용 코드</span></li>
+              <li><i data-lucide="bug"></i><span>실제 노출된<br>취약점(CVE)</span></li>
+            </ul>
+            <figcaption class="pf-flow__cap">프로덕션 Java 런타임 데이터에서 실행 가능한 인텔리전스로</figcaption>
+          </figure>
+        </div>
+
+        <div class="grid grid--4 mt-64 pf-ic-bubbles">
+          <div class="card card--soft" data-reveal>
+            <div class="card__icon pf-icon-cloud"><i data-lucide="filter"></i></div>
+            <h3 class="card__title">취약성 오탐지 제거</h3>
+          </div>
+          <div class="card card--soft" data-reveal style="--d:.08s">
+            <div class="card__icon pf-icon-cloud"><i data-lucide="list-checks"></i></div>
+            <h3 class="card__title">새로운 취약점을 효율적으로 분류</h3>
+          </div>
+          <div class="card card--soft" data-reveal style="--d:.16s">
+            <div class="card__icon pf-icon-cloud"><i data-lucide="eye"></i></div>
+            <h3 class="card__title">코드 사용 분석 및 미사용 코드 가시성</h3>
+          </div>
+          <div class="card card--soft" data-reveal style="--d:.24s">
+            <div class="card__icon pf-icon-cloud"><i data-lucide="history"></i></div>
+            <h3 class="card__title">실시간 및 과거 분석</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. AZUL PAYARA ============ -->
+    <section class="section section--soft" id="payara" aria-labelledby="payara-title">
+      <div class="container">
+        <div class="split split--5-7">
+          <div data-reveal>
+            <span class="eyebrow pf-eyebrow-payara">Azul Payara</span>
+            <h2 class="h2 mt-16" id="payara-title">애플리케이션 서버까지,<br class="br-desktop"> Azul 하나로</h2>
+            <p class="lead mt-24">아줄(Azul)이 파야라(Payara)를 인수했습니다. 이제 Java 런타임과 함께 Jakarta EE 애플리케이션 서버도 Azul 포트폴리오로 도입할 수 있습니다.</p>
+            <p class="footnote mt-24">* 수치는 Azul Systems 공개 자료 기준이며, 고객 환경에 따라 달라질 수 있습니다.</p>
+          </div>
+          <div class="grid grid--2">
+            <article class="card product-card" data-accent="payara" data-reveal>
+              <div class="card__icon"><i data-lucide="server"></i></div>
+              <span class="card__label">Application server</span>
+              <h3 class="card__title">Azul Payara Server</h3>
+              <p class="card__text">Jakarta EE 애플리케이션 서버.</p>
+              <ul class="check-list card__body pf-mini-list">
+                <li>WebLogic · WebSphere · JBoss에서 대규모 재작성 없이 전환</li>
+                <li>앱 서버 라이선스 비용 최대 60% 절감</li>
+              </ul>
+            </article>
+            <article class="card product-card" data-accent="payara" data-reveal style="--d:.08s">
+              <div class="card__icon"><i data-lucide="boxes"></i></div>
+              <span class="card__label">Cloud-native runtime</span>
+              <h3 class="card__title">Azul Payara Micro</h3>
+              <p class="card__text">클라우드 네이티브 Jakarta EE 11 · MicroProfile 런타임.</p>
+              <ul class="check-list card__body pf-mini-list">
+                <li>약 100MB 단일 JAR, 수 초 내 기동</li>
+                <li>Docker · Kubernetes 환경에 적합</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. CORE vs PRIME ============ -->
+    <section class="section pf-gap" id="compare" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Core vs Prime</span>
+          <h2 class="h2" id="compare-title">우리 조직에 맞는 Java 런타임은?</h2>
+          <p class="lead">두 제품 모두 코드 수정 없이 기존 Java를 대체합니다. 목표가 비용과 보안이라면 Core, 성능과 클라우드 효율까지라면 Prime입니다.</p>
+        </div>
+
+        <div class="pf-compare" data-reveal>
+          <table class="pf-compare__table">
+            <caption class="sr-only">Azul Platform Core와 Azul Platform Prime 비교</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">항목</span></th>
+                <th scope="col" class="pf-compare__core"><span class="pf-compare__dot"></span>Azul Platform Core</th>
+                <th scope="col" class="pf-compare__prime"><span class="pf-compare__dot"></span>Azul Platform Prime</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">한 줄 요약</th>
+                <td data-label="Core">세계에서 가장 많이 지원되는 OpenJDK 빌드</td>
+                <td data-label="Prime">놀라운 가치를 제공하는 초고속 성능</td>
+              </tr>
+              <tr>
+                <th scope="row">기반 빌드</th>
+                <td data-label="Core">Azul Zulu builds of OpenJDK<br><span class="muted small">구 Zulu Enterprise / Embedded</span></td>
+                <td data-label="Prime">Azul Zing builds of OpenJDK<br><span class="muted small">구 Zing</span></td>
+              </tr>
+              <tr>
+                <th scope="row">호환성</th>
+                <td data-label="Core">Java SE TCK 검증, Oracle Java SE 일대일 drop-in 대체</td>
+                <td data-label="Prime">Java TCK 준수 drop-in, 코드 수정 · 재컴파일 불필요</td>
+              </tr>
+              <tr>
+                <th scope="row">핵심 기술</th>
+                <td data-label="Core">분기별 CPU · PSU, 수시 보안 패치, 레거시 Java 6 · 7 지원, IP 면책</td>
+                <td data-label="Prime">C4 Pauseless GC, Falcon JIT, ReadyNow, Optimizer Hub</td>
+              </tr>
+              <tr>
+                <th scope="row">기대 효과*</th>
+                <td data-label="Core">Oracle Java 대비 <strong>최대 70%</strong> 비용 절감</td>
+                <td data-label="Prime"><strong>2–5x</strong> 빠른 워밍업, 최대 50% 적은 컴퓨팅 코어, 클라우드 비용 <strong>20% 이상</strong> 절감</td>
+              </tr>
+              <tr>
+                <th scope="row">이런 조직에</th>
+                <td data-label="Core">Oracle Java SE 구독 비용을 줄이고, 레거시를 포함한 Java 자산을 안정적으로 운영하려는 조직</td>
+                <td data-label="Prime">지연 시간에 민감한 서비스와 대규모 클라우드 인프라를 운영하며 성능과 비용을 함께 잡으려는 조직</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="footnote mt-16">* 수치는 Azul Systems 공개 자료 기준이며, 고객 환경에 따라 달라질 수 있습니다.</p>
+      </div>
+    </section>
+
+    <!-- ============ 9. MIGRATION (dark) ============ -->
+    <section class="section section--dark pf-migration" id="migration" aria-labelledby="migration-title">
+      <span class="glow glow--blue pf-migration__glow" aria-hidden="true"></span>
+      <div class="container">
+        <div class="section-head section-head--split" data-reveal>
+          <div class="section-head__main">
+            <span class="eyebrow">Oracle Java → Azul</span>
+            <h2 class="h2" id="migration-title">Oracle Java에서 Azul로,<br class="br-desktop"> 안전하게 전환하세요</h2>
+            <p class="lead">앨리웍스는 Azul Authorized Migration Advisory &amp; Services Partner입니다. 현황 진단부터 전환, 이후 기술지원과 유지보수까지 한 팀이 책임집니다.</p>
+          </div>
+          <ul class="chip-row pf-mig-chips" aria-label="앨리웍스 전환 파트너 자격">
+            <li class="chip chip--dark"><i data-lucide="badge-check"></i> Migration Advisory Partner</li>
+            <li class="chip chip--dark"><i data-lucide="badge-check"></i> Migration Services Partner</li>
+          </ul>
+        </div>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num">STEP 01</span>
+            <h3 class="step__title">진단 · 인벤토리</h3>
+            <p class="step__text">운영 중인 JVM과 Oracle Java 사용 현황을 목록화하고 전환 대상과 범위를 파악합니다.</p>
+          </li>
+          <li class="step" data-reveal style="--d:.08s">
+            <span class="step__num">STEP 02</span>
+            <h3 class="step__title">전환 계획 · PoC</h3>
+            <p class="step__text">마이그레이션 플레이북을 수립하고, 핵심 애플리케이션으로 사전 검증(PoC)을 진행합니다.</p>
+          </li>
+          <li class="step" data-reveal style="--d:.16s">
+            <span class="step__num">STEP 03</span>
+            <h3 class="step__title">전환</h3>
+            <p class="step__text">새 OpenJDK 배포판 설치, JAVA_HOME 변경, 재시작. Applet 등 레거시 기술은 대체 방안을 적용합니다.</p>
+          </li>
+          <li class="step" data-reveal style="--d:.24s">
+            <span class="step__num">STEP 04</span>
+            <h3 class="step__title">검증 · 기술지원/유지보수</h3>
+            <p class="step__text">분기별 보안 업데이트(CPU) 주기에 맞춰 컴플라이언스를 유지하고, 앨리웍스가 지속 지원합니다.</p>
+          </li>
+        </ol>
+
+        <div class="split mt-64 pf-mig-row">
+          <div class="card card--glass pf-cost" data-reveal>
+            <span class="card__label">Cost comparison</span>
+            <h3 class="card__title mt-8">Java 런타임 비용 비교</h3>
+            <div class="bars mt-32" data-reveal>
+              <div class="bar">
+                <div class="bar__head"><span>Oracle Java SE 구독</span><span>100%</span></div>
+                <div class="bar__track"><div class="bar__fill" style="--w:100%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__head"><span>Azul Platform Core</span><span>≈ 30%</span></div>
+                <div class="bar__track"><div class="bar__fill bar__fill--brand" style="--w:30%"></div></div>
+              </div>
+            </div>
+            <p class="pf-cost__save"><span class="text-grad">최대 70% 절감</span></p>
+            <p class="footnote mt-16">* Azul Systems 공개 자료 기준(서버 배포 시 Oracle Java SE 구독 가격 대비)이며, 고객 환경에 따라 달라질 수 있습니다.</p>
+          </div>
+
+          <div data-reveal style="--d:.1s">
+            <div class="terminal" role="img" aria-label="JAVA_HOME을 Azul Zulu로 변경하는 예시 터미널 화면">
+              <div class="terminal__bar"><i></i><i></i><i></i><span class="terminal__title">switch-jdk.sh — 예시</span></div>
+<div class="terminal__body"><span class="t-dim"># 1. 기존 런타임 확인</span>
+<span class="t-prompt">$</span> <span class="t-cmd">java -version</span>
+<span class="t-warn">java version "17.0.x"</span> <span class="t-dim">· Oracle Java SE</span>
+
+<span class="t-dim"># 2. Azul Zulu 설치 후 JAVA_HOME 변경</span>
+<span class="t-prompt">$</span> <span class="t-cmd">export JAVA_HOME=<span class="t-hl">/opt/azul/zulu17</span></span>
+<span class="t-prompt">$</span> <span class="t-cmd">export PATH=$JAVA_HOME/bin:$PATH</span>
+
+<span class="t-dim"># 3. 애플리케이션 재시작</span>
+<span class="t-prompt">$</span> <span class="t-cmd">systemctl restart my-app</span>
+<span class="t-prompt">$</span> <span class="t-cmd">java -version</span>
+<span class="t-cyan">openjdk version "17.0.x"</span>
+<span class="t-cyan">OpenJDK Runtime Environment Zulu17</span>
+<span class="t-ok">✓ 코드 수정 없이 전환 완료</span></div>
+            </div>
+            <p class="footnote mt-16">설명을 위한 예시입니다. 대부분의 서버 애플리케이션 기준이며, 실제 절차는 환경에 따라 다릅니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. FAQ ============ -->
+    <section class="section pf-gap" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="split split--5-7 split--top">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">FAQ</span>
+            <h2 class="h2" id="faq-title">자주 묻는 질문</h2>
+            <p class="lead">더 궁금한 점은 앨리웍스에 직접 문의해 주세요. 도입 환경에 맞춰 안내해 드립니다.</p>
+            <a class="link-arrow" href="contact.html">문의하기 <i data-lucide="arrow-right"></i></a>
+          </div>
+          <div class="faq" data-reveal style="--d:.08s">
+            <details open>
+              <summary>Azul Zulu와 Azul Platform Core는 어떻게 다른가요?</summary>
+              <div class="faq__body">
+                <p>Azul Zulu는 Azul이 만드는 OpenJDK 빌드입니다. Azul Platform Core(구 Zulu Enterprise / Embedded)는 이 Azul Zulu 빌드를 기반으로 분기별 CPU · PSU 보안 업데이트, Java 6 · 7 레거시 지원, IP 보호 및 면책, Standard · Premium 기술지원을 더한 엔터프라이즈 제품입니다.</p>
+              </div>
+            </details>
+            <details>
+              <summary>전환할 때 애플리케이션 코드를 수정해야 하나요?</summary>
+              <div class="faq__body">
+                <p>Azul Platform Core는 Java SE TCK 검증을 통과한 Oracle Java SE의 일대일 drop-in 대체 제품입니다. Azul에 따르면 대부분의 서버 애플리케이션은 새 OpenJDK 배포판 설치, JAVA_HOME 변경, 재시작만으로 전환됩니다. Azul Platform Prime 역시 코드 수정이나 재컴파일이 필요하지 않습니다.</p>
+                <p>앨리웍스는 사전 진단과 PoC로 고객 환경에서의 전환 가능성을 먼저 확인합니다.</p>
+              </div>
+            </details>
+            <details>
+              <summary>어떤 Java 버전과 플랫폼을 지원하나요?</summary>
+              <div class="faq__body">
+                <p>LTS 버전인 Java 8, 11, 17, 21, 25와 STS 릴리스를 지원하며, Java 6 · 7은 레거시 프로덕션 지원을 제공합니다. LTS 버전은 최소 8년의 프로덕션 지원(+2년 연장 지원)을 받습니다.</p>
+                <p>운영체제는 Linux, macOS, Windows, 아키텍처는 x64, ARM, Alpine 등을 지원하며 패키지 매니저, 컨테이너 이미지, 직접 다운로드로 설치할 수 있습니다.</p>
+              </div>
+            </details>
+            <details>
+              <summary>기술지원은 어떻게 받나요?</summary>
+              <div class="faq__body">
+                <p>Azul 한국 공식 총판인 앨리웍스가 도입 상담, 전환, 기술지원과 유지보수를 국내에서 직접 제공합니다. 여기에 Azul의 지원 등급이 더해집니다.</p>
+                <p>Standard는 업무 시간 지원과 익영업일 응답, Premium은 24x7x365 지원과 1시간 이내 최초 응답을 제공합니다.</p>
+              </div>
+            </details>
+            <details>
+              <summary>견적은 어떻게 받을 수 있나요?</summary>
+              <div class="faq__body">
+                <p><a class="text-brand" href="contact.html">문의하기</a> 페이지나 이메일(<a class="text-brand" href="mailto:joon@allyworks.co.kr">joon@allyworks.co.kr</a>), 전화(<a class="text-brand" href="tel:070-4099-2232">070-4099-2232</a>)로 연락해 주세요. 사용 중인 Java 버전과 서버 규모, 운영 환경을 알려주시면 맞춤 견적을 안내해 드립니다.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. CTA ============ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band bg-grid" data-reveal>
+          <span class="glow glow--blue" aria-hidden="true"></span>
+          <span class="glow glow--violet" aria-hidden="true"></span>
+          <div class="cta-band__text">
+            <h2 class="h2">Java 비용과 성능,<br class="br-desktop"> 지금 진단해 보세요</h2>
+            <p class="lead">현재 Java 사용 환경을 알려주시면 앨리웍스가 Azul 전환 효과와 맞춤 견적을 안내해 드립니다.</p>
+          </div>
+          <div class="btn-row">
+            <a href="contact.html" class="btn btn--primary btn--lg">도입 상담 신청 <i data-lucide="arrow-right"></i></a>
+            <a href="mailto:joon@allyworks.co.kr" class="btn btn--ghost-light btn--lg">메일 보내기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER (identical on every page) ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a href="index.html" class="brand" aria-label="Allyworks 홈으로">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="aw-mark-f" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#3a66ff"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#aw-mark-f)"/><path d="M9.5 23.5 16 8.5l6.5 15" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="18.6" r="2" fill="#7ff0ff"/></svg>
+            </span>
+            <span class="brand__name">Allyworks</span>
+          </a>
+          <p class="site-footer__tagline">현재의 경험과 미래의 가치를 연결하는 IT 파트너.<br>Java 플랫폼 공급부터 시스템 통합·유지보수까지 함께합니다.</p>
+          <span class="site-footer__badge"><i data-lucide="badge-check"></i> Azul Systems 한국 공식 총판 (Authorized Distributor)</span>
+        </div>
+        <div class="site-footer__cols">
+          <div>
+            <h2>Company</h2>
+            <ul>
+              <li><a href="company.html">회사소개</a></li>
+              <li><a href="company.html#vision">비전 &amp; 전략</a></li>
+              <li><a href="partners.html">파트너 &amp; 고객사</a></li>
+              <li><a href="contact.html#location">오시는 길</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Solutions</h2>
+            <ul>
+              <li><a href="platform.html#core">Azul Platform Core</a></li>
+              <li><a href="platform.html#prime">Azul Platform Prime</a></li>
+              <li><a href="platform.html#intelligence-cloud">Azul Intelligence Cloud</a></li>
+              <li><a href="platform.html#migration">Oracle Java 전환</a></li>
+              <li><a href="services.html">시스템 통합 · 유지보수</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="mailto:joon@allyworks.co.kr">joon@allyworks.co.kr</a></li>
+              <li><a href="tel:070-4099-2232">070-4099-2232</a></li>
+              <li><a href="https://www.linkedin.com/company/allyworksco/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="contact.html">문의하기</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <address>
+          <span>주식회사 앨리웍스 (Allyworks Co., Ltd.)</span>
+          <span>대표이사 권범준</span>
+          <span>경기도 안산시 단원구 이삭로 18, 403호</span>
+        </address>
+        <p>© <span data-year>2026</span> Allyworks Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
