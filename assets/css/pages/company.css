@@ -143,7 +143,7 @@ main .section.co-pt:not(.section--soft):not(.section--dark) { padding-top: var(-
   box-shadow: var(--shadow-lg);
 }
 .co-azul__tile img { width: 153px; height: auto; }
-.co-azul__caption { margin-top: 24px; font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-brand); }
+.co-azul__caption { margin-top: 24px; font-family: var(--font-sans, inherit); font-size: 0.8125rem; letter-spacing: 0.02em; font-weight: 600; text-transform: uppercase; color: var(--c-brand); }
 .co-azul__note { margin-top: 6px; }
 /* HeroDevs panel: mirrored layout + HeroDevs brand accents */
 .co-hd { grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); }
