@@ -9,7 +9,7 @@
 | --- | --- |
 | `index.html` | 메인 — 히어로, 고객사, 사업분야, Java 플랫폼, Oracle 대비 비용, 진행 방식, 시스템 통합, 파트너, 문의 |
 | `company.html` | 회사소개 — 인사말, 핵심가치, 비전·전략·핵심 경쟁력(`#vision`), 사업분야, Azul 파트너십, 회사 개요 |
-| `platform.html` | Java 플랫폼(Azul) — Core(`#core`), Prime(`#prime`), Intelligence Cloud(`#intelligence-cloud`), Payara(`#payara`), Oracle Java 전환(`#migration`), FAQ |
+| `platform.html` | Java 플랫폼(Azul) — Core(`#core`), Prime(`#prime`), Runtime Intelligence(`#runtime-intelligence`), Payara(`#payara`), Oracle Java 전환(`#migration`), FAQ |
 | `herodevs.html` | 오픈소스 EOL 지원(HeroDevs) — Never-Ending Support(`#nes`), 지원 기술(`#coverage`), 도입 방식(`#how-it-works`), 보안·규제 대응(`#security`), Azul과 함께(`#with-azul`), FAQ |
 | `services.html` | 시스템 통합 — 공공기관 SI 구축(`#build`), 시스템 통합 유지보수(`#maintenance`), 수행 프로세스 |
 | `partners.html` | 파트너 — 글로벌 파트너(Azul Systems, HeroDevs), 국내 사업 파트너, 주요 고객사 |

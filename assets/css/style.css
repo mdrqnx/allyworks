@@ -252,6 +252,10 @@ table { border-collapse: collapse; }
 .chip--brand { background: var(--c-brand-50); border-color: transparent; color: var(--c-brand); }
 .chip--dark { background: rgba(255, 255, 255, 0.06); border-color: var(--c-dark-line-2); color: var(--c-dark-text); }
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 560px) {
+  /* long labels (e.g. "한국 공식 총판(Authorized Distributor)") wrap instead of being clipped */
+  .chip { white-space: normal; height: auto; min-height: 30px; padding-block: 5px; line-height: 1.35; max-width: 100%; }
+}
 
 .badge-pill {
   display: inline-flex; align-items: center; gap: 10px;
