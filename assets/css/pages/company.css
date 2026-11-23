@@ -71,20 +71,50 @@ main .section.co-pt:not(.section--soft):not(.section--dark) { padding-top: var(-
   .co-vision__num { font-size: 3rem; }
 }
 
-/* ---------- 사업분야 ---------- */
+/* ---------- 사업분야 (2 featured distributorships + 3) ---------- */
+.co-biz-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
+.co-biz-grid > .co-biz { grid-column: span 2; }
+.co-biz-grid > .co-biz--feature { grid-column: span 3; }
+.co-biz__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.co-biz__flag {
+  display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: 999px;
+  background: var(--c-brand-50); color: var(--c-brand); font-size: 0.8125rem; font-weight: 600; white-space: nowrap;
+}
+.co-biz__flag .lucide { width: 14px; height: 14px; }
+.co-biz--feature { overflow: hidden; background: linear-gradient(180deg, #fff 55%, var(--c-bg-soft)); }
+.co-biz--feature::before {
+  content: ""; position: absolute; inset: 0 0 auto; height: 3px;
+  background: var(--grad);
+}
+.co-biz--feature .card__title { font-size: 1.375rem; }
+.co-biz--feature .card__text { max-width: 480px; }
+/* HeroDevs accent (official brand colors, accent only) */
+.co-biz--hd::before { background: linear-gradient(90deg, #F926E1, #2AB5FB); }
+.co-biz--hd .co-biz__flag { background: rgba(249, 38, 225, 0.08); color: #b5179f; }
+@media (max-width: 760px) {
+  .co-biz-grid { grid-template-columns: 1fr; gap: 16px; }
+  .co-biz-grid > .co-biz, .co-biz-grid > .co-biz--feature { grid-column: auto; }
+}
+@media (max-width: 420px) {
+  .co-biz__top { flex-direction: column-reverse; gap: 14px; }
+  .co-biz__top .card__icon { margin-bottom: 10px; }
+}
 .co-biz .card__label { margin-top: 0; }
 .co-biz .card__title { font-size: 1.1875rem; }
 .co-biz:hover .card__icon { background: var(--grad); color: #fff; }
 .co-biz .card__icon { transition: background 0.3s var(--ease), color 0.3s var(--ease); }
 
-/* ---------- Azul ---------- */
+/* ---------- 글로벌 파트너십 (Azul · HeroDevs) ---------- */
+.co-partner__intro { max-width: 520px; }
+.co-partners { display: grid; gap: 28px; }
+.co-partner__title { font-size: clamp(1.75rem, 2.8vw, 2.375rem); line-height: 1.22; letter-spacing: -0.032em; font-weight: 750; color: var(--c-ink); }
 .co-azul {
   display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
   background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius-xl);
   overflow: hidden; box-shadow: var(--shadow);
 }
 .co-azul__main { padding: clamp(32px, 5vw, 64px); }
-.co-azul__main .h2 { margin-top: 16px; }
+.co-azul__main .co-partner__title { margin-top: 16px; }
 .co-azul__main .lead { margin-top: 18px; }
 .co-azul__caps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
 .co-azul__caps li {
@@ -115,8 +145,40 @@ main .section.co-pt:not(.section--soft):not(.section--dark) { padding-top: var(-
 .co-azul__tile img { width: 153px; height: auto; }
 .co-azul__caption { margin-top: 24px; font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-brand); }
 .co-azul__note { margin-top: 6px; }
+/* HeroDevs panel: mirrored layout + HeroDevs brand accents */
+.co-hd { grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); }
+.co-hd .co-azul__visual { order: -1; border-left: 0; border-right: 1px solid var(--c-line);
+  background: linear-gradient(135deg, rgba(249, 38, 225, 0.09), rgba(42, 181, 251, 0.11)); }
+.co-hd .co-azul__visual::before {
+  background-image:
+    radial-gradient(circle at 50% calc(50% - 30px), transparent 0 96px, rgba(249, 38, 225, 0.14) 97px 98px, transparent 99px),
+    radial-gradient(circle at 50% calc(50% - 30px), transparent 0 156px, rgba(42, 181, 251, 0.16) 157px 158px, transparent 159px),
+    radial-gradient(circle at 50% calc(50% - 30px), transparent 0 220px, rgba(249, 38, 225, 0.08) 221px 222px, transparent 223px);
+}
+.co-hd__tile img { width: 176px; height: auto; }
+.co-hd__eyebrow { color: #c21aa9; }
+.co-hd__caption { color: #c21aa9; }
+.co-hd .co-azul__caps .feature__icon { color: #c21aa9; }
+
+.co-bridge {
+  display: flex; align-items: center; gap: 20px; margin-top: 28px; padding: 22px 28px;
+  border: 1px dashed var(--c-line-2); border-radius: var(--radius-lg); background: rgba(255, 255, 255, 0.6);
+}
+.co-bridge__icon {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+  background: var(--grad); color: #fff;
+}
+.co-bridge__icon .lucide { width: 22px; height: 22px; }
+.co-bridge p { flex: 1; color: var(--c-text-2); font-size: 0.9375rem; }
+.co-bridge p strong { color: var(--c-ink); margin-right: 4px; }
+.co-bridge .link-arrow { flex-shrink: 0; }
+@media (max-width: 860px) {
+  .co-bridge { flex-direction: column; align-items: flex-start; gap: 14px; padding: 22px; }
+}
+
 @media (max-width: 1024px) {
-  .co-azul { grid-template-columns: 1fr; }
+  .co-azul, .co-hd { grid-template-columns: 1fr; }
+  .co-hd .co-azul__visual { border-right: 0; }
   .co-azul__visual { border-left: 0; border-top: 1px solid var(--c-line); order: -1; }
 }
 @media (max-width: 640px) {

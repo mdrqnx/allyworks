@@ -94,3 +94,6 @@
   .svc-why .feature { flex-direction: column; gap: 16px; }
   .svc-tile__num { font-size: 2.75rem; }
 }
+
+/* Why Allyworks: two links in one card */
+.svc-why__links { display: flex; flex-wrap: wrap; gap: 10px 24px; }
