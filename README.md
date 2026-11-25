@@ -49,3 +49,12 @@ python3 -m http.server 8000
 ## 참고
 
 - 파트너·고객사 로고는 각 사의 상표이며, 기존 앨리웍스 홈페이지에 게시된 이미지를 그대로 사용했습니다.
+
+## 영어 버전 (English)
+
+- 영어 페이지는 `en/` 폴더에 있습니다: `en/index.html`, `en/company.html`, `en/platform.html`, `en/herodevs.html`,
+  `en/services.html`, `en/partners.html`, `en/contact.html` — 한국어 페이지와 같은 구조·같은 CSS/JS/이미지를 씁니다(`../assets/`).
+- 모든 페이지 헤더의 **KO / EN** 전환 버튼은 같은 페이지의 다른 언어 버전으로 이동합니다.
+- `assets/js/main.js`는 `<html lang>` 값에 따라 메뉴·문의 양식 문구를 한국어/영어로 바꿉니다.
+- 영어 전용 레이아웃 보정이 필요한 경우 각 페이지 CSS에 `html[lang="en"]` 범위로만 넣었습니다(한국어 화면에는 영향 없음).
+- 한국어 문구를 바꾸면 `en/` 의 같은 페이지도 함께 고쳐 주세요.
