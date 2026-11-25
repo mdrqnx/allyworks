@@ -174,3 +174,11 @@
   .pt-duo__tag { grid-row: auto; margin-bottom: 2px; }
   .pt-hd .btn-row .btn { width: 100%; }
 }
+
+/* English only: longer labels */
+html[lang="en"] .pt-duo__tag { white-space: normal; line-height: 1.35; }
+@media (max-width: 560px) {
+  html[lang="en"] .pt-tag { right: 8px; line-height: 1.2; align-items: flex-start; }
+  html[lang="en"] .pt-tag::before { margin-top: 3px; }
+  html[lang="en"] .pt-cloud--clients .logo-cloud__item { padding-top: 40px; }
+}

@@ -118,3 +118,6 @@ main .section.ct-pt:not(.section--soft):not(.section--dark) { padding-top: var(-
   .ct-map__pin { left: 38%; }
   .ct-maps__btn { flex: 1 1 100%; }
 }
+
+/* English only: wider label column for the consent notice */
+html[lang="en"] .ct-consent__notice dt { width: 104px; }

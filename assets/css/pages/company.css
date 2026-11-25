@@ -190,3 +190,6 @@ main .section.co-pt:not(.section--soft):not(.section--dark) { padding-top: var(-
 .co-muted { color: var(--c-text-3); font-weight: 400; }
 .co-inline-link { display: inline-flex; align-items: center; gap: 4px; margin-left: 10px; font-size: 0.875rem; font-weight: 600; color: var(--c-brand); white-space: nowrap; }
 .co-inline-link .lucide { width: 14px; height: 14px; }
+
+/* English page: Latin name signature (no wide tracking; name on its own line) */
+html[lang="en"] .co-sign__name { margin-left: 0; letter-spacing: -0.01em; }

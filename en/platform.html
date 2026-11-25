@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Java Platform · Azul Systems | Allyworks</title>
+  <meta name="description" content="Allyworks, the Authorized Distributor of Azul Systems in Korea, offers TCK-certified OpenJDK Azul Platform Core, high-performance JVM Azul Platform Prime, Azul Runtime Intelligence, and Oracle Java migration services.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Allyworks">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Java Platform · Azul Systems | Allyworks">
+  <meta property="og:description" content="Allyworks, the Authorized Distributor of Azul Systems in Korea, offers TCK-certified OpenJDK Azul Platform Core, high-performance JVM Azul Platform Prime, Azul Runtime Intelligence, and Oracle Java migration services.">
+  <meta name="theme-color" content="#060a17">
+  <link rel="alternate" hreflang="ko" href="../platform.html">
+  <link rel="alternate" hreflang="en" href="platform.html">
+  <link rel="icon" href="../assets/img/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/pages/platform.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Allyworks home">
+        <img class="brand__logo brand__logo--light" src="../assets/img/brand/allyworks-logo-white.svg" alt="" width="125" height="24">
+        <img class="brand__logo brand__logo--color" src="../assets/img/brand/allyworks-logo.svg" alt="" width="125" height="24">
+      </a>
+      <nav class="gnb" aria-label="Main">
+        <ul>
+          <li><a href="company.html">About</a></li>
+          <li><a href="platform.html" aria-current="page">Java Platform</a></li>
+          <li><a href="herodevs.html">EOL Support</a></li>
+          <li><a href="services.html">System Integration</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <div class="lang-switch" role="group" aria-label="Language"><a href="../platform.html" lang="ko" hreflang="ko">KO</a><a href="platform.html" aria-current="true" lang="en">EN</a></div>
+        <a href="contact.html" class="btn btn--sm btn--primary">Contact us <i data-lucide="arrow-right"></i></a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+      <ul>
+        <li><a href="company.html">About <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="platform.html" aria-current="page">Java Platform <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="herodevs.html">Open Source EOL Support <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="services.html">System Integration <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="partners.html">Partners <i data-lucide="arrow-up-right"></i></a></li>
+        <li><a href="contact.html">Contact us <i data-lucide="arrow-up-right"></i></a></li>
+      </ul>
+      <a href="mailto:joon@allyworks.co.kr" class="btn btn--primary btn--lg">Email us</a>
+      <p class="mobile-nav__meta">joon@allyworks.co.kr<br>+82-70-4099-2232</p>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="page-hero on-dark bg-grid pf-hero">
+      <span class="glow glow--blue" aria-hidden="true"></span>
+      <span class="glow glow--violet" aria-hidden="true"></span>
+      <div class="container pf-hero__grid">
+        <div class="page-hero__inner">
+          <ol class="breadcrumb" aria-label="Breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Java Platform</li>
+          </ol>
+          <span class="eyebrow">Java Platform · Azul Systems</span>
+          <h1 class="h1">Enterprise Java,<br>faster, safer, and<br><span class="text-grad">more affordable</span></h1>
+          <p class="lead">The Java platform for the modern cloud enterprise, powering the most advanced Java applications and deployments with proven performance, security, and value. Allyworks is the Authorized Distributor of Azul Systems in Korea and supplies the full Azul portfolio in Korea.</p>
+          <ul class="chip-row pf-hero__chips" aria-label="Key features">
+            <li class="chip chip--dark"><i data-lucide="badge-check"></i> Azul Authorized Distributor in Korea</li>
+            <li class="chip chip--dark"><i data-lucide="shield-check"></i> TCK-certified OpenJDK</li>
+            <li class="chip chip--dark"><i data-lucide="layers"></i> Supports Java 6–25</li>
+          </ul>
+          <div class="btn-row">
+            <a href="contact.html" class="btn btn--primary btn--lg">Talk to us <i data-lucide="arrow-right"></i></a>
+            <a href="#products" class="btn btn--ghost-light btn--lg">Explore products</a>
+          </div>
+        </div>
+
+        <figure class="pf-stack" aria-label="Azul Java platform architecture">
+          <div class="pf-stack__app">
+            <i data-lucide="app-window"></i>
+            <span>Enterprise Java applications</span>
+          </div>
+          <div class="pf-stack__layer" data-accent="payara">
+            <span class="pf-stack__dot"></span>
+            <span class="pf-stack__name">Azul Payara</span>
+            <span class="pf-stack__role">Jakarta EE runtime</span>
+          </div>
+          <div class="pf-stack__pair">
+            <div class="pf-stack__layer" data-accent="core">
+              <span class="pf-stack__dot"></span>
+              <span class="pf-stack__name">Platform Core</span>
+              <span class="pf-stack__role">TCK-certified OpenJDK</span>
+            </div>
+            <div class="pf-stack__layer" data-accent="prime">
+              <span class="pf-stack__dot"></span>
+              <span class="pf-stack__name">Platform Prime</span>
+              <span class="pf-stack__role">High-performance JVM</span>
+            </div>
+          </div>
+          <div class="pf-stack__layer pf-stack__layer--wide" data-accent="cloud">
+            <span class="pf-stack__dot"></span>
+            <span class="pf-stack__name">Azul Runtime Intelligence</span>
+            <span class="pf-stack__role">Inventory · vulnerability detection</span>
+          </div>
+          <figcaption class="pf-stack__base">Linux · Windows · macOS &nbsp;/&nbsp; x64 · ARM · Container</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 2. WHY AZUL / WHY NOW ============ -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="split split--7-5 split--top">
+          <div>
+            <div class="section-head" data-reveal>
+              <span class="eyebrow">Why Azul, why now</span>
+              <h2 class="h2" id="why-title">It's time to recalculate<br class="br-desktop"> your Java licensing costs</h2>
+              <p class="lead">Since January 2023, Oracle Java SE Universal Subscription has been priced by your <strong>total employee count</strong>, not by actual Java usage. Azul, by contrast, charges <strong>per vCore</strong>. Its TCK-certified OpenJDK drops in without code changes, lowering costs while keeping your security and support levels intact.</p>
+            </div>
+            <div class="pf-why-list">
+              <div class="feature" data-reveal>
+                <div class="feature__icon"><i data-lucide="users"></i></div>
+                <div>
+                  <h3 class="feature__title">Priced per vCore, not per employee</h3>
+                  <p class="feature__text">Oracle counts every employee, including those who never touch Java. Azul charges for the vCores you actually use, regardless of headcount.</p>
+                  <div class="pf-price-compare" aria-label="Pricing basis comparison">
+                    <span class="pf-price-compare__item pf-price-compare__item--oracle"><b>Oracle Java SE</b> Per employee</span>
+                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    <span class="pf-price-compare__item pf-price-compare__item--azul"><b>Azul</b> Per vCore</span>
+                  </div>
+                </div>
+              </div>
+              <div class="feature" data-reveal style="--d:.08s">
+                <div class="feature__icon"><i data-lucide="refresh-cw"></i></div>
+                <div>
+                  <h3 class="feature__title">Drop-in replacement, no code changes</h3>
+                  <p class="feature__text">A 100% open-source build verified against the Java SE TCK. Most server applications switch over with just an install, a JAVA_HOME change, and a restart.</p>
+                </div>
+              </div>
+              <div class="feature" data-reveal style="--d:.16s">
+                <div class="feature__icon"><i data-lucide="shield-check"></i></div>
+                <div>
+                  <h3 class="feature__title">The same security update cadence as Oracle</h3>
+                  <p class="feature__text">Quarterly CPU and PSU updates, plus out-of-cycle emergency patches as needed. Azul is the only Java vendor other than Oracle that delivers both CPUs and monthly CSPUs (per Azul).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card pf-cred" data-reveal style="--d:.1s" aria-labelledby="cred-title">
+            <div class="pf-cred__logo">
+              <img src="../assets/img/partners/azul.png" width="153" height="64" alt="Azul Systems logo">
+            </div>
+            <span class="card__label">Global Partner · APAC</span>
+            <h3 class="card__title" id="cred-title">Azul Systems Authorized Distributor in Korea</h3>
+            <p class="card__text">As the Authorized Distributor of Azul Systems in Korea, Allyworks supplies the full Azul portfolio in Korea and takes direct responsibility for everything from initial consultation and migration to technical support and maintenance.</p>
+            <div class="card__body">
+              <p class="pf-cred__sub">Capabilities listed in the Azul Partner Directory</p>
+              <ul class="check-list pf-cred__list">
+                <li>Java Development</li>
+                <li>Java Upgrades</li>
+                <li>Java Compliance / Defense</li>
+                <li>Authorized Migration Advisory Partner</li>
+                <li>Authorized Migration Services Partner</li>
+              </ul>
+            </div>
+            <div class="card__foot">
+              <a class="link-arrow" href="https://www.azul.com/partner-directory/allyworks-co-ltd/" target="_blank" rel="noopener">View in the Azul Partner Directory <i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="stats pf-stats mt-64" data-reveal>
+          <div class="stat">
+            <div class="stat__value"><small class="pf-pre">Up to</small><span data-count="70">70</span><small>%</small></div>
+            <p class="stat__label">Lower costs vs. Oracle Java<br><span class="pf-stat-tag">Platform Core</span></p>
+          </div>
+          <div class="stat">
+            <div class="stat__value"><span data-count="20">20</span><small>%+</small></div>
+            <p class="stat__label">Lower cloud costs<br><span class="pf-stat-tag">Platform Prime</span></p>
+          </div>
+          <div class="stat">
+            <div class="stat__value">2–5<small>x</small></div>
+            <p class="stat__label">Faster warm-up (vs. OpenJDK)<br><span class="pf-stat-tag">Platform Prime</span></p>
+          </div>
+          <div class="stat">
+            <div class="stat__value"><span data-count="8">8</span><small>&nbsp;yrs+</small></div>
+            <p class="stat__label">Production support for LTS versions<br><span class="pf-stat-tag">+ 2 years of extended support</span></p>
+          </div>
+        </div>
+        <p class="footnote mt-16">* Figures and Oracle licensing details are based on Azul Systems' published materials and may vary by environment. Savings are measured against Oracle Java SE subscription pricing for server deployments.</p>
+      </div>
+    </section>
+
+    <!-- ============ 3. PRODUCT OVERVIEW ============ -->
+    <section class="section section--soft" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-head section-head--split" data-reveal>
+          <div class="section-head__main">
+            <span class="eyebrow">Products</span>
+            <h2 class="h2" id="products-title">Make Java safer, more efficient,<br class="br-desktop"> and more economical</h2>
+          </div>
+          <p class="lead pf-head-aside">The Azul portfolio, built by the world's largest independent Java engineering team. Pick what you need, from runtimes to visibility to application servers.</p>
+        </div>
+
+        <div class="grid grid--4 pf-products">
+          <article class="card card--hover product-card" data-accent="core" data-reveal>
+            <div class="card__icon"><i data-lucide="coffee"></i></div>
+            <span class="card__label">Java runtime</span>
+            <h3 class="card__title">Azul Platform Core</h3>
+            <p class="card__text">The world's best-supported OpenJDK builds, a one-to-one replacement for Oracle Java SE.</p>
+            <ul class="check-list card__body pf-mini-list">
+              <li>TCK-certified · quarterly security updates</li>
+              <li>Supports Java 6–25</li>
+              <li>Up to 70% savings vs. Oracle Java</li>
+            </ul>
+            <div class="card__foot"><a class="link-arrow" href="#core">Learn more <i data-lucide="arrow-right"></i></a></div>
+          </article>
+          <article class="card card--hover product-card" data-accent="prime" data-reveal style="--d:.08s">
+            <div class="card__icon"><i data-lucide="zap"></i></div>
+            <span class="card__label">High-performance JVM</span>
+            <h3 class="card__title">Azul Platform Prime</h3>
+            <p class="card__text">Superfast performance at an incredible value. Faster warm-up, faster code, and right-sized resources.</p>
+            <ul class="check-list card__body pf-mini-list">
+              <li>C4 · Falcon JIT · ReadyNow</li>
+              <li>2–5x faster warm-up</li>
+              <li>20%+ lower cloud costs</li>
+            </ul>
+            <div class="card__foot"><a class="link-arrow" href="#prime">Learn more <i data-lucide="arrow-right"></i></a></div>
+          </article>
+          <article class="card card--hover product-card" data-accent="cloud" data-reveal style="--d:.16s">
+            <div class="card__icon"><i data-lucide="radar"></i></div>
+            <span class="card__label">Visibility · security</span>
+            <h3 class="card__title">Azul Runtime Intelligence</h3>
+            <p class="card__text">Turns production Java runtime data into actionable intelligence to boost DevOps productivity.</p>
+            <ul class="check-list card__body pf-mini-list">
+              <li>Runtime Inventory</li>
+              <li>Code Inventory</li>
+              <li>Vulnerability Detection</li>
+            </ul>
+            <div class="card__foot"><a class="link-arrow" href="#runtime-intelligence">Learn more <i data-lucide="arrow-right"></i></a></div>
+          </article>
+          <article class="card card--hover product-card" data-accent="payara" data-reveal style="--d:.24s">
+            <div class="card__icon"><i data-lucide="server"></i></div>
+            <span class="card__label">Jakarta EE runtime</span>
+            <h3 class="card__title">Azul Payara</h3>
+            <p class="card__text">An application server you can move to from WebLogic, WebSphere, or JBoss without major rewrites.</p>
+            <ul class="check-list card__body pf-mini-list">
+              <li>Payara Server</li>
+              <li>Payara Micro</li>
+              <li>Up to 60% lower app server licensing costs</li>
+            </ul>
+            <div class="card__foot"><a class="link-arrow" href="#payara">Learn more <i data-lucide="arrow-right"></i></a></div>
+          </article>
+        </div>
+        <p class="footnote mt-24">* Figures are based on Azul Systems' published materials and may vary by environment.</p>
+      </div>
+    </section>
+
+    <!-- ============ 4. AZUL PLATFORM CORE ============ -->
+    <section class="section pf-gap" id="core" aria-labelledby="core-title">
+      <div class="container">
+        <div class="split">
+          <div data-reveal>
+            <span class="eyebrow">Azul Platform Core</span>
+            <h2 class="h2 mt-16" id="core-title">The world's best-supported<br class="br-desktop"> OpenJDK builds</h2>
+            <p class="lead mt-24">Azul Platform Core is designed for the enterprise. It combines the certified builds, rigorous security, and cost efficiency you need to run today's business-critical Java services.</p>
+            <ul class="check-list mt-32 pf-core-list">
+              <li><strong>Verified against the Java SE TCK</strong> — 100% open-source Azul Zulu builds</li>
+              <li><strong>Quarterly CPU and PSU updates</strong> plus out-of-cycle security patches</li>
+              <li><strong>Production support for legacy Java 6 and 7</strong> — Applets and Java Web Start via IcedTea-Web</li>
+              <li><strong>IP protection and indemnification</strong> included</li>
+              <li><strong>A Java runtime for OEMs and ISVs</strong></li>
+            </ul>
+            <div class="btn-row mt-32">
+              <a href="https://www.azul.com/products/core/" class="btn btn--dark" target="_blank" rel="noopener">More on Azul Platform Core <i data-lucide="arrow-up-right"></i></a>
+              <a href="contact.html" class="btn btn--ghost">Talk to us</a>
+            </div>
+          </div>
+
+          <figure class="pf-venn-wrap" data-reveal style="--d:.1s">
+            <div class="pf-venn" role="img" aria-label="Three values of Azul Platform Core: Oracle Java replacement, security readiness and compliance, and IP protection and indemnification">
+              <span class="pf-venn__c pf-venn__c--a"><b>Oracle Java<br>replacement</b></span>
+              <span class="pf-venn__c pf-venn__c--b"><b>Security &amp;<br>compliance</b></span>
+              <span class="pf-venn__c pf-venn__c--c"><b>IP protection<br>&amp; indemnity</b></span>
+              <span class="pf-venn__core">Azul Zulu</span>
+            </div>
+            <figcaption class="pf-venn__cap">
+              <span><i data-lucide="coffee"></i> Includes Azul Zulu, the world's most secure and stable OpenJDK</span>
+              <span><i data-lucide="trending-down"></i> Up to 70% lower costs vs. Oracle Java*</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="split split--7-5 split--top mt-64 pf-core-row">
+          <div class="card pf-roadmap" data-reveal>
+            <div class="pf-roadmap__head">
+              <div>
+                <span class="card__label">Supported versions</span>
+                <h3 class="card__title mt-8">Supported versions &amp; production support roadmap</h3>
+              </div>
+              <span class="chip chip--brand"><i data-lucide="calendar-clock"></i> LTS: 8+ years + 2-year extension</span>
+            </div>
+            <div class="pf-roadmap__chart">
+              <div class="pf-roadmap__axis" aria-hidden="true">
+                <span></span>
+                <span class="pf-roadmap__ticks"><em style="--x:0%">2026</em><em style="--x:25%" class="pf-tick-minor">2028</em><em style="--x:50%">2030</em><em style="--x:75%" class="pf-tick-minor">2032</em><em style="--x:100%">2034</em></span>
+                <span></span>
+              </div>
+              <ul class="pf-roadmap__rows">
+                <li style="--w:96.3%"><span class="pf-roadmap__v">Java 25 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2033.09</span></li>
+                <li style="--w:71.3%"><span class="pf-roadmap__v">Java 21 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2031.09</span></li>
+                <li style="--w:46.3%"><span class="pf-roadmap__v">Java 17 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2029.09</span></li>
+                <li style="--w:75.5%"><span class="pf-roadmap__v">Java 11 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2032.01</span></li>
+                <li style="--w:61.9%"><span class="pf-roadmap__v">Java 8 <em>LTS</em></span><span class="pf-roadmap__track"><span class="pf-roadmap__fill"></span></span><span class="pf-roadmap__date">2030.12</span></li>
+                <li class="pf-roadmap__legacy"><span class="pf-roadmap__v">Java 6 · 7</span><span class="pf-roadmap__note"><i data-lucide="history"></i> Production support</span><span class="pf-roadmap__date">Legacy</span></li>
+              </ul>
+            </div>
+            <p class="footnote mt-24">Bars run from today (2026) to the end of production support on Azul's roadmap (YYYY.MM). STS releases (Java 27, GA September 2026) are also supported. Dates are based on Azul's public roadmap.</p>
+          </div>
+
+          <div class="pf-core-side">
+            <div class="card pf-tiers" data-reveal style="--d:.08s">
+              <span class="card__label">Support tiers</span>
+              <h3 class="card__title mt-8">Support tiers to fit your needs</h3>
+              <div class="pf-tier">
+                <div class="feature__icon"><i data-lucide="clock"></i></div>
+                <div>
+                  <p class="pf-tier__name">Standard</p>
+                  <p class="pf-tier__text">Business-hours support ·<span style="white-space:nowrap"> next-business-day response</span></p>
+                </div>
+              </div>
+              <div class="pf-tier">
+                <div class="feature__icon pf-tier__icon--premium"><i data-lucide="headset"></i></div>
+                <div>
+                  <p class="pf-tier__name">Premium</p>
+                  <p class="pf-tier__text">24x7x365 support · initial response within 1 hour</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card--soft pf-platforms" data-reveal style="--d:.16s">
+              <span class="card__label">Platforms &amp; tools</span>
+              <ul class="chip-row mt-16" aria-label="Supported platforms">
+                <li class="chip">Linux</li><li class="chip">macOS</li><li class="chip">Windows</li>
+                <li class="chip">x64</li><li class="chip">ARM</li><li class="chip">Alpine</li>
+                <li class="chip"><i data-lucide="package"></i> Package managers</li><li class="chip"><i data-lucide="container"></i> Container images</li>
+              </ul>
+              <p class="small muted mt-16">Operational tools include Mission Control, Migration Toolkit, GC Log Analyzer, and Azul Inspector.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. AZUL PLATFORM PRIME (dark) ============ -->
+    <section class="section section--dark pf-prime" id="prime" aria-labelledby="prime-title">
+      <span class="glow glow--violet pf-prime__glow" aria-hidden="true"></span>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Azul Platform Prime</span>
+          <h2 class="h2" id="prime-title"><span class="text-grad">Superfast Java performance</span><br class="br-desktop"> at an incredible value</h2>
+          <p class="lead">Azul Platform Prime (formerly Zing) is a high-performance JVM based on Azul Zing builds of OpenJDK. As a Java TCK-compliant drop-in runtime, it raises throughput per core and makes tail latency lower and more predictable, with no code changes or recompilation.</p>
+        </div>
+
+        <div class="split split--7-5">
+          <figure class="card card--glass pf-charts" data-reveal>
+            <div class="pf-charts__head">
+              <span class="card__label">Illustrative</span>
+              <ul class="pf-legend" aria-label="Legend">
+                <li class="pf-legend__prime">Azul Platform Prime</li>
+                <li class="pf-legend__base">Standard OpenJDK</li>
+              </ul>
+            </div>
+            <div class="pf-charts__grid">
+              <div class="pf-chart">
+                <p class="pf-chart__title">Warm-up · throughput</p>
+                <svg viewBox="0 0 400 140" role="img" aria-label="Illustration: Azul Platform Prime reaches peak throughput sooner than standard OpenJDK">
+                  <defs>
+                    <linearGradient id="pf-grad-line" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#7f9bff"/><stop offset=".6" stop-color="#b49cff"/><stop offset="1" stop-color="#6ee3ff"/></linearGradient>
+                    <linearGradient id="pf-grad-area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7b5cff" stop-opacity=".3"/><stop offset="1" stop-color="#7b5cff" stop-opacity="0"/></linearGradient>
+                  </defs>
+                  <g class="pf-chart__grid"><path d="M30 28H392M30 60H392M30 92H392"/></g>
+                  <path class="pf-chart__axis" d="M30 16V122H392"/>
+                  <path d="M30 120 C 50 58, 70 34, 112 31 L 392 28 V122 H30Z" fill="url(#pf-grad-area)"/>
+                  <path class="pf-chart__base" d="M30 121 C 100 118, 140 98, 190 74 S 300 40, 392 36"/>
+                  <path class="pf-chart__prime" d="M30 120 C 50 58, 70 34, 112 31 L 392 28" stroke="url(#pf-grad-line)"/>
+                  <text x="36" y="12" class="pf-chart__ax">Throughput ↑</text>
+                  <text x="392" y="137" text-anchor="end" class="pf-chart__ax">Time →</text>
+                </svg>
+              </div>
+              <div class="pf-chart">
+                <p class="pf-chart__title">Latency · GC pauses</p>
+                <svg viewBox="0 0 400 140" role="img" aria-label="Illustration: standard OpenJDK shows latency spikes from GC pauses, while Platform Prime with C4 keeps latency low and steady">
+                  <g class="pf-chart__grid"><path d="M30 28H392M30 60H392M30 92H392"/></g>
+                  <path class="pf-chart__axis" d="M30 16V122H392"/>
+                  <path class="pf-chart__base" d="M30 100 L70 98 L80 52 L90 99 L150 97 L160 30 L170 98 L230 100 L240 64 L250 98 L310 97 L320 24 L330 99 L392 98"/>
+                  <path class="pf-chart__prime" d="M30 112 C 100 110, 160 113, 220 111 S 330 110, 392 111" stroke="url(#pf-grad-line)"/>
+                  <text x="36" y="12" class="pf-chart__ax">Latency ↑</text>
+                  <text x="392" y="137" text-anchor="end" class="pf-chart__ax">Time →</text>
+                </svg>
+              </div>
+            </div>
+            <figcaption class="pf-charts__cap"><i data-lucide="info"></i> Conceptual illustration for explanation only, not actual measurements.</figcaption>
+          </figure>
+
+          <div class="pf-prime-features">
+            <div class="feature" data-reveal>
+              <div class="feature__icon"><i data-lucide="timer"></i></div>
+              <div>
+                <h3 class="feature__title">C4 Pauseless GC</h3>
+                <p class="feature__text">A pauseless garbage collector that reduces GC-induced latency spikes and keeps tail latency predictable.</p>
+              </div>
+            </div>
+            <div class="feature" data-reveal style="--d:.08s">
+              <div class="feature__icon"><i data-lucide="cpu"></i></div>
+              <div>
+                <h3 class="feature__title">Falcon JIT compiler</h3>
+                <p class="feature__text">An LLVM-based JIT compiler that produces faster code for higher throughput per core.</p>
+              </div>
+            </div>
+            <div class="feature" data-reveal style="--d:.16s">
+              <div class="feature__icon"><i data-lucide="rocket"></i></div>
+              <div>
+                <h3 class="feature__title">ReadyNow</h3>
+                <p class="feature__text">Cuts warm-up time so applications run fast right after deployment or restart.</p>
+              </div>
+            </div>
+            <div class="feature" data-reveal style="--d:.24s">
+              <div class="feature__icon"><i data-lucide="cloud-cog"></i></div>
+              <div>
+                <h3 class="feature__title">Optimizer Hub</h3>
+                <p class="feature__text">Optimizer Hub services such as Cloud Native Compiler make JVM optimization more efficient across your infrastructure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid--3 mt-64">
+          <article class="card card--glass" data-reveal>
+            <div class="card__icon pf-glass-icon"><i data-lucide="gauge"></i></div>
+            <h3 class="card__title">Better application performance<br>and latency</h3>
+            <p class="card__text">A high-performance Java runtime delivers faster warm-up, faster code, and faster JVM performance for a better user experience.</p>
+          </article>
+          <article class="card card--glass" data-reveal style="--d:.08s">
+            <div class="card__icon pf-glass-icon"><i data-lucide="cloud"></i></div>
+            <h3 class="card__title">Optimized infrastructure<br>and cloud costs</h3>
+            <p class="card__text">Higher throughput per core means right-sized resources can handle the same workloads.</p>
+          </article>
+          <article class="card card--glass" data-reveal style="--d:.16s">
+            <div class="card__icon pf-glass-icon"><i data-lucide="workflow"></i></div>
+            <h3 class="card__title">DevOps productivity<br>and efficiency</h3>
+            <p class="card__text">You swap only the runtime, with no code changes, so less time goes to tuning and incident response.</p>
+          </article>
+        </div>
+
+        <div class="stats pf-stats-3 mt-64" data-reveal>
+          <div class="stat">
+            <div class="stat__value">2–5<small>x</small></div>
+            <p class="stat__label">Faster warm-up than standard OpenJDK</p>
+          </div>
+          <div class="stat">
+            <div class="stat__value"><small class="pf-pre">Up to</small><span data-count="50">50</span><small>%</small></div>
+            <p class="stat__label">Fewer compute cores</p>
+          </div>
+          <div class="stat">
+            <div class="stat__value"><span data-count="20">20</span><small>%+</small></div>
+            <p class="stat__label">Lower cloud costs</p>
+          </div>
+        </div>
+        <div class="pf-prime-foot">
+          <p class="footnote">* Figures are based on Azul Systems' published materials and may vary by environment.</p>
+          <a href="https://www.azul.com/products/prime/" class="btn btn--ghost-light" target="_blank" rel="noopener">More on Azul Platform Prime <i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. AZUL INTELLIGENCE CLOUD ============ -->
+    <section class="section pf-gap" id="runtime-intelligence" aria-labelledby="ic-title">
+      <div class="container">
+        <div class="split">
+          <div>
+            <div data-reveal>
+              <span class="eyebrow">Azul Runtime Intelligence</span>
+              <h2 class="h2 mt-16" id="ic-title">Boost DevOps productivity<br class="br-desktop"> with production runtime data</h2>
+              <p class="lead mt-24">Turn data from the Java runtimes you run in production into actionable intelligence. It continuously detects known vulnerabilities and catalogs the code that actually runs, giving you the most accurate signal.</p>
+            </div>
+            <div class="pf-ic-features mt-48">
+              <div class="feature" data-reveal>
+                <div class="feature__icon pf-icon-cloud"><i data-lucide="server-cog"></i></div>
+                <div>
+                  <h3 class="feature__title">Runtime Inventory</h3>
+                  <p class="feature__text">Catalogs every running or installed JVM and tracks Oracle JVM usage, supporting license audit response and migration planning.</p>
+                </div>
+              </div>
+              <div class="feature" data-reveal style="--d:.08s">
+                <div class="feature__icon pf-icon-cloud"><i data-lucide="file-code-2"></i></div>
+                <div>
+                  <h3 class="feature__title">Code Inventory</h3>
+                  <p class="feature__text">Shows which libraries, classes, and methods actually run in production, exposing unused code.</p>
+                </div>
+              </div>
+              <div class="feature" data-reveal style="--d:.16s">
+                <div class="feature__icon pf-icon-cloud"><i data-lucide="shield-alert"></i></div>
+                <div>
+                  <h3 class="feature__title">Vulnerability Detection</h3>
+                  <p class="feature__text">Detects known CVEs in running Java applications and filters out false positives by cross-checking JDK updates and the CISA KEV catalog.</p>
+                </div>
+              </div>
+            </div>
+            <a class="link-arrow mt-32" href="https://www.azul.com/products/intelligence-cloud/" target="_blank" rel="noopener">More on Azul Runtime Intelligence <i data-lucide="arrow-up-right"></i></a>
+          </div>
+
+          <figure class="pf-flow" data-reveal style="--d:.1s" aria-label="From production Java runtime data to actionable intelligence">
+            <p class="pf-flow__label">Production Java runtimes</p>
+            <div class="pf-flow__jvms" aria-hidden="true">
+              <span><i data-lucide="coffee"></i> JVM</span><span><i data-lucide="coffee"></i> JVM</span><span><i data-lucide="coffee"></i> JVM</span><span><i data-lucide="coffee"></i> JVM</span>
+            </div>
+            <span class="pf-flow__arrow" aria-hidden="true"></span>
+            <div class="pf-flow__hub">
+              <span class="pf-flow__hub-icon"><i data-lucide="radar"></i></span>
+              <div>
+                <strong>Azul Runtime Intelligence</strong>
+                <span>Runtime data collection · analysis</span>
+              </div>
+            </div>
+            <span class="pf-flow__arrow" aria-hidden="true"></span>
+            <ul class="pf-flow__out">
+              <li><i data-lucide="list-checks"></i><span>JVM and Oracle Java usage</span></li>
+              <li><i data-lucide="code-2"></i><span>Code that runs<br class="br-desktop"> vs. unused code</span></li>
+              <li><i data-lucide="bug"></i><span>Vulnerabilities (CVEs) actually exposed</span></li>
+            </ul>
+            <figcaption class="pf-flow__cap">From production Java runtime data to actionable intelligence</figcaption>
+          </figure>
+        </div>
+
+        <div class="grid grid--4 mt-64 pf-ic-bubbles">
+          <div class="card card--soft" data-reveal>
+            <div class="card__icon pf-icon-cloud"><i data-lucide="filter"></i></div>
+            <h3 class="card__title">Eliminate false-positive vulnerabilities</h3>
+          </div>
+          <div class="card card--soft" data-reveal style="--d:.08s">
+            <div class="card__icon pf-icon-cloud"><i data-lucide="list-checks"></i></div>
+            <h3 class="card__title">Triage new vulnerabilities efficiently</h3>
+          </div>
+          <div class="card card--soft" data-reveal style="--d:.16s">
+            <div class="card__icon pf-icon-cloud"><i data-lucide="eye"></i></div>
+            <h3 class="card__title">Code usage analysis and unused-code visibility</h3>
+          </div>
+          <div class="card card--soft" data-reveal style="--d:.24s">
+            <div class="card__icon pf-icon-cloud"><i data-lucide="history"></i></div>
+            <h3 class="card__title">Real-time and historical analysis</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. AZUL PAYARA ============ -->
+    <section class="section section--soft" id="payara" aria-labelledby="payara-title">
+      <div class="container">
+        <div class="split split--5-7">
+          <div data-reveal>
+            <span class="eyebrow pf-eyebrow-payara">Azul Payara</span>
+            <h2 class="h2 mt-16" id="payara-title">Your application server,<br class="br-desktop"> from Azul too</h2>
+            <p class="lead mt-24">Azul has acquired Payara. You can now adopt a Jakarta EE application server from the Azul portfolio alongside your Java runtime.</p>
+            <p class="footnote mt-24">* Figures are based on Azul Systems' published materials and may vary by environment.</p>
+          </div>
+          <div class="grid grid--2">
+            <article class="card product-card" data-accent="payara" data-reveal>
+              <div class="card__icon"><i data-lucide="server"></i></div>
+              <span class="card__label">Application server</span>
+              <h3 class="card__title">Azul Payara Server</h3>
+              <p class="card__text">A Jakarta EE application server.</p>
+              <ul class="check-list card__body pf-mini-list">
+                <li>Move from WebLogic, WebSphere, or JBoss without major rewrites</li>
+                <li>Up to 60% lower app server licensing costs</li>
+              </ul>
+            </article>
+            <article class="card product-card" data-accent="payara" data-reveal style="--d:.08s">
+              <div class="card__icon"><i data-lucide="boxes"></i></div>
+              <span class="card__label">Cloud-native runtime</span>
+              <h3 class="card__title">Azul Payara Micro</h3>
+              <p class="card__text">A cloud-native Jakarta EE 11 and MicroProfile runtime.</p>
+              <ul class="check-list card__body pf-mini-list">
+                <li>Single JAR of about 100 MB that starts in seconds</li>
+                <li>Well suited to Docker and Kubernetes</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. CORE vs PRIME ============ -->
+    <section class="section pf-gap" id="compare" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Core vs Prime</span>
+          <h2 class="h2" id="compare-title">Which Java runtime is right for you?</h2>
+          <p class="lead">Both replace your existing Java with no code changes. If your goals are cost and security, choose Core. If you also want performance and cloud efficiency, choose Prime.</p>
+        </div>
+
+        <div class="pf-compare" data-reveal>
+          <table class="pf-compare__table">
+            <caption class="sr-only">Comparison of Azul Platform Core and Azul Platform Prime</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Attribute</span></th>
+                <th scope="col" class="pf-compare__core"><span class="pf-compare__dot"></span>Azul Platform Core</th>
+                <th scope="col" class="pf-compare__prime"><span class="pf-compare__dot"></span>Azul Platform Prime</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">In a nutshell</th>
+                <td data-label="Core">The world's best-supported OpenJDK builds</td>
+                <td data-label="Prime">Superfast performance at an incredible value</td>
+              </tr>
+              <tr>
+                <th scope="row">Base build</th>
+                <td data-label="Core">Azul Zulu builds of OpenJDK<br><span class="muted small">Formerly Zulu Enterprise / Embedded</span></td>
+                <td data-label="Prime">Azul Zing builds of OpenJDK<br><span class="muted small">Formerly Zing</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Compatibility</th>
+                <td data-label="Core">Verified against the Java SE TCK; one-to-one drop-in replacement for Oracle Java SE</td>
+                <td data-label="Prime">Java TCK-compliant drop-in; no code changes or recompilation</td>
+              </tr>
+              <tr>
+                <th scope="row">Key technology</th>
+                <td data-label="Core">Quarterly CPU and PSU, out-of-cycle security patches, legacy Java 6 and 7 support, IP indemnification</td>
+                <td data-label="Prime">C4 Pauseless GC, Falcon JIT, ReadyNow, Optimizer Hub</td>
+              </tr>
+              <tr>
+                <th scope="row">Expected benefits*</th>
+                <td data-label="Core"><strong>Up to 70%</strong> lower costs vs. Oracle Java</td>
+                <td data-label="Prime"><strong>2–5x</strong> faster warm-up, up to 50% fewer compute cores, <strong>20%+</strong> lower cloud costs</td>
+              </tr>
+              <tr>
+                <th scope="row">Best for</th>
+                <td data-label="Core">Organizations that want to cut Oracle Java SE subscription costs and run their Java estate, legacy included, reliably</td>
+                <td data-label="Prime">Organizations running latency-sensitive services and large-scale cloud infrastructure that want both performance and lower costs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="footnote mt-16">* Figures are based on Azul Systems' published materials and may vary by environment.</p>
+      </div>
+    </section>
+
+    <!-- ============ 9. MIGRATION (dark) ============ -->
+    <section class="section section--dark pf-migration" id="migration" aria-labelledby="migration-title">
+      <span class="glow glow--blue pf-migration__glow" aria-hidden="true"></span>
+      <div class="container">
+        <div class="section-head section-head--split" data-reveal>
+          <div class="section-head__main">
+            <span class="eyebrow">Oracle Java → Azul</span>
+            <h2 class="h2" id="migration-title">Move from Oracle Java<br class="br-desktop"> to Azul, safely</h2>
+            <p class="lead">Allyworks is an Azul Authorized Migration Advisory &amp; Services Partner. One team owns everything from assessment and migration to ongoing technical support and maintenance.</p>
+          </div>
+          <ul class="chip-row pf-mig-chips" aria-label="Allyworks migration partner credentials">
+            <li class="chip chip--dark"><i data-lucide="badge-check"></i> Authorized Migration Advisory Partner</li>
+            <li class="chip chip--dark"><i data-lucide="badge-check"></i> Authorized Migration Services Partner</li>
+          </ul>
+        </div>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num">STEP 01</span>
+            <h3 class="step__title">Assessment · inventory</h3>
+            <p class="step__text">Inventory the JVMs in operation and Oracle Java usage, and define migration targets and scope.</p>
+          </li>
+          <li class="step" data-reveal style="--d:.08s">
+            <span class="step__num">STEP 02</span>
+            <h3 class="step__title">Migration plan · PoC</h3>
+            <p class="step__text">Build a migration playbook and validate it in advance with a proof of concept (PoC) on key applications.</p>
+          </li>
+          <li class="step" data-reveal style="--d:.16s">
+            <span class="step__num">STEP 03</span>
+            <h3 class="step__title">Migration</h3>
+            <p class="step__text">Install the new OpenJDK distribution, change JAVA_HOME, and restart. Legacy technologies such as Applets get alternative solutions.</p>
+          </li>
+          <li class="step" data-reveal style="--d:.24s">
+            <span class="step__num">STEP 04</span>
+            <h3 class="step__title">Validation · support &amp; maintenance</h3>
+            <p class="step__text">Stay compliant on the quarterly security update (CPU) cycle, with ongoing support from Allyworks.</p>
+          </li>
+        </ol>
+
+        <div class="split mt-64 pf-mig-row">
+          <div class="card card--glass pf-cost" data-reveal>
+            <span class="card__label">Cost comparison</span>
+            <h3 class="card__title mt-8">Java runtime cost comparison</h3>
+            <div class="bars mt-32" data-reveal>
+              <div class="bar">
+                <div class="bar__head"><span>Oracle Java SE subscription</span><span>100%</span></div>
+                <div class="bar__track"><div class="bar__fill" style="--w:100%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__head"><span>Azul Platform Core</span><span>≈ 30%</span></div>
+                <div class="bar__track"><div class="bar__fill bar__fill--brand" style="--w:30%"></div></div>
+              </div>
+            </div>
+            <p class="pf-cost__save"><span class="text-grad">Up to 70% savings</span></p>
+            <p class="footnote mt-16">* Based on Azul Systems' published materials (vs. Oracle Java SE subscription pricing for server deployments); results may vary by environment.</p>
+          </div>
+
+          <div data-reveal style="--d:.1s">
+            <div class="terminal" role="img" aria-label="Example terminal session switching JAVA_HOME to Azul Zulu">
+              <div class="terminal__bar"><i></i><i></i><i></i><span class="terminal__title">switch-jdk.sh — example</span></div>
+<div class="terminal__body"><span class="t-dim"># 1. Check the current runtime</span>
+<span class="t-prompt">$</span> <span class="t-cmd">java -version</span>
+<span class="t-warn">java version "17.0.x"</span> <span class="t-dim">· Oracle Java SE</span>
+
+<span class="t-dim"># 2. Install Azul Zulu, then change JAVA_HOME</span>
+<span class="t-prompt">$</span> <span class="t-cmd">export JAVA_HOME=<span class="t-hl">/opt/azul/zulu17</span></span>
+<span class="t-prompt">$</span> <span class="t-cmd">export PATH=$JAVA_HOME/bin:$PATH</span>
+
+<span class="t-dim"># 3. Restart the application</span>
+<span class="t-prompt">$</span> <span class="t-cmd">systemctl restart my-app</span>
+<span class="t-prompt">$</span> <span class="t-cmd">java -version</span>
+<span class="t-cyan">openjdk version "17.0.x"</span>
+<span class="t-cyan">OpenJDK Runtime Environment Zulu17</span>
+<span class="t-ok">✓ Switched over with no code changes</span></div>
+            </div>
+            <p class="footnote mt-16">Illustrative example based on most server applications; actual steps vary by environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 9-1. EOL FRAMEWORKS (HeroDevs cross-sell) ============ -->
+    <section class="section section--soft section--tight pf-eol" id="eol-frameworks" aria-labelledby="eol-title">
+      <div class="container">
+        <div class="pf-eol__panel" data-reveal>
+          <div class="pf-eol__text">
+            <span class="eyebrow pf-eol__eyebrow">Runtime + Frameworks</span>
+            <h2 class="h3 pf-eol__title" id="eol-title">JDK from Azul,<br class="br-desktop"> EOL frameworks from HeroDevs</h2>
+            <p class="muted">Switching your JDK won't help if the frameworks running on it have reached end of life (EOL): their security patches still stop. As the Authorized Distributor of HeroDevs in Korea, Allyworks also offers Never-Ending Support (NES), which delivers security patches for the exact versions you already run.</p>
+            <div class="pf-eol__links">
+              <a class="link-arrow" href="herodevs.html#coverage">See what's covered <i data-lucide="arrow-right"></i></a>
+              <a class="link-arrow" href="herodevs.html#with-azul">Using it with Azul <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="pf-eol__stack" aria-label="Support coverage by layer of the Java application stack">
+            <div class="pf-eol__layer pf-eol__layer--hd">
+              <div class="pf-eol__head"><span class="pf-eol__tag mono">Frameworks · Libraries</span><strong>HeroDevs NES</strong></div>
+              <ul class="pf-eol__chips">
+                <li>Spring Boot 1.x · 2.x · 3.x</li>
+                <li>Spring Framework 4.3 · 5.3</li>
+                <li>Apache Tomcat 8.5</li>
+                <li>Apache Struts 1.x · 2.5</li>
+                <li>Log4j 1</li>
+                <li>Hibernate 5.6</li>
+              </ul>
+            </div>
+            <div class="pf-eol__layer pf-eol__layer--azul">
+              <div class="pf-eol__head"><span class="pf-eol__tag mono">Java Runtime</span><strong>Azul Platform Core · Prime</strong></div>
+              <ul class="pf-eol__chips">
+                <li>Java 6 · 7 (legacy)</li>
+                <li>Java 8 · 11 · 17 · 21 · 25</li>
+              </ul>
+            </div>
+            <p class="footnote">* Selected examples based on HeroDevs' and Azul Systems' published materials; supported versions may change.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. FAQ ============ -->
+    <section class="section pf-gap" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="split split--5-7 split--top">
+          <div class="section-head" data-reveal>
+            <span class="eyebrow">FAQ</span>
+            <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+            <p class="lead">Still have questions? Contact Allyworks directly, and we'll advise you based on your setup.</p>
+            <a class="link-arrow" href="contact.html">Contact us <i data-lucide="arrow-right"></i></a>
+          </div>
+          <div class="faq" data-reveal style="--d:.08s">
+            <details open>
+              <summary>How is Azul Zulu different from Azul Platform Core?</summary>
+              <div class="faq__body">
+                <p>Azul Zulu is the OpenJDK build made by Azul. Azul Platform Core (formerly Zulu Enterprise / Embedded) is the enterprise product built on Azul Zulu builds, adding quarterly CPU and PSU security updates, legacy Java 6 and 7 support, IP protection and indemnification, and Standard or Premium technical support.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Do we need to change application code to migrate?</summary>
+              <div class="faq__body">
+                <p>Azul Platform Core is a one-to-one drop-in replacement for Oracle Java SE, verified against the Java SE TCK. According to Azul, most server applications switch over by installing the new OpenJDK distribution, changing JAVA_HOME, and restarting. Azul Platform Prime likewise requires no code changes or recompilation.</p>
+                <p>Allyworks first confirms that migration will work in your environment through an upfront assessment and a PoC.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Which Java versions and platforms are supported?</summary>
+              <div class="faq__body">
+                <p>The LTS versions Java 8, 11, 17, 21, and 25 are supported, as are STS releases, and Java 6 and 7 receive legacy production support. LTS versions get at least 8 years of production support (plus 2 years of extended support).</p>
+                <p>Supported operating systems include Linux, macOS, and Windows; supported architectures and environments include x64, ARM, and Alpine. You can install via package managers, container images, or direct download.</p>
+              </div>
+            </details>
+            <details>
+              <summary>How do we get technical support?</summary>
+              <div class="faq__body">
+                <p>As the Authorized Distributor of Azul in Korea, Allyworks provides consultation, migration, technical support, and maintenance directly in Korea, on top of Azul's support tiers.</p>
+                <p>Standard offers business-hours support with next-business-day response; Premium offers 24x7x365 support with an initial response within 1 hour.</p>
+              </div>
+            </details>
+            <details>
+              <summary>What about end of life (EOL) for frameworks such as Spring?</summary>
+              <div class="faq__body">
+                <p>Azul supports the JDK (the Java runtime). For end-of-life frameworks and libraries that run on top of it, such as Spring Boot, Spring Framework, Tomcat, Struts, and Log4j 1, you can keep receiving security patches through HeroDevs Never-Ending Support (NES). Because NES keeps the same version line and APIs, you simply change the repository settings in your package manager (such as Maven) and rebuild.</p>
+                <p>As the Authorized Distributor in Korea for both Azul and HeroDevs, Allyworks can advise you on both together. <a class="text-brand" href="herodevs.html">Explore Open Source EOL Support</a></p>
+              </div>
+            </details>
+            <details>
+              <summary>How do we get a quote?</summary>
+              <div class="faq__body">
+                <p>Reach us through the <a class="text-brand" href="contact.html">Contact us</a> page, by email (<a class="text-brand" href="mailto:joon@allyworks.co.kr">joon@allyworks.co.kr</a>), or by phone (<a class="text-brand" href="tel:+827040992232">+82-70-4099-2232</a>). Tell us your Java versions, server footprint, and operating environment, and we'll prepare a tailored quote.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. CTA ============ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band bg-grid" data-reveal>
+          <span class="glow glow--blue" aria-hidden="true"></span>
+          <span class="glow glow--violet" aria-hidden="true"></span>
+          <div class="cta-band__text">
+            <h2 class="h2">Check your Java costs<br class="br-desktop"> and performance today</h2>
+            <p class="lead">Tell us about your Java environment, and Allyworks will show you what moving to Azul could deliver, with a tailored quote.</p>
+          </div>
+          <div class="btn-row">
+            <a href="contact.html" class="btn btn--primary btn--lg">Request a consultation <i data-lucide="arrow-right"></i></a>
+            <a href="mailto:joon@allyworks.co.kr" class="btn btn--ghost-light btn--lg">Send an email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <a href="index.html" class="brand" aria-label="Allyworks home">
+            <img class="brand__logo" src="../assets/img/brand/allyworks-logo-white.svg" alt="" width="125" height="24">
+          </a>
+          <p class="site-footer__tagline">An IT partner connecting today's experience with tomorrow's value — from Java platforms and EOL open-source support to system integration and maintenance.</p>
+          <span class="site-footer__badge"><i data-lucide="badge-check"></i> Authorized Distributor in Korea for Azul Systems · HeroDevs</span>
+        </div>
+        <div class="site-footer__cols">
+          <div>
+            <h2>Company</h2>
+            <ul>
+              <li><a href="company.html">About us</a></li>
+              <li><a href="company.html#vision">Vision &amp; Strategy</a></li>
+              <li><a href="partners.html">Partners &amp; Clients</a></li>
+              <li><a href="contact.html#location">Location</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Solutions</h2>
+            <ul>
+              <li><a href="platform.html#core">Azul Platform Core</a></li>
+              <li><a href="platform.html#prime">Azul Platform Prime</a></li>
+              <li><a href="platform.html#runtime-intelligence">Azul Runtime Intelligence</a></li>
+              <li><a href="platform.html#migration">Oracle Java Migration</a></li>
+              <li><a href="herodevs.html">HeroDevs NES</a></li>
+              <li><a href="services.html">System Integration &amp; Maintenance</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="mailto:joon@allyworks.co.kr">joon@allyworks.co.kr</a></li>
+              <li><a href="tel:+827040992232">+82-70-4099-2232</a></li>
+              <li><a href="https://www.linkedin.com/company/allyworksco/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <address>
+          <span>Allyworks Co., Ltd.</span>
+          <span>CEO Beomjun Kwon</span>
+          <span>403, 18 Isak-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Republic of Korea</span>
+        </address>
+        <p>© <span data-year>2026</span> Allyworks Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

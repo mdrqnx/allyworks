@@ -366,3 +366,6 @@
 /* ---------- CTA ---------- */
 .cta-section { padding-top: 0; }
 .cta-band .eyebrow { color: #8ea6ff; }
+
+/* English page: keep the partner names together in the hero badge */
+html[lang="en"] .hero__badge b { white-space: nowrap; flex-shrink: 0; }
